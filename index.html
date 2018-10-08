@@ -230,6 +230,10 @@
 ]
     `);
 
+
+    // Neue Zeile (row) klonen und in die Tabelle einfügen
+    var chapterContainer = document.getElementById("chapter_container");
+
     var bookmarks = new Array();
     loadBookmarks();
 
@@ -299,7 +303,9 @@
        document.getElementById("header_bookmark").style.display = "none";
 
        var chapterContent = findChapter(chapterName);
-       chapterContent.forEach(addChapterCard);
+       chapterContent.forEach(function(chapterItem) {
+            chapterContainer.appendChild(createChapterCard(chapterItem));
+         });
 
        //document.getElementById("main_container").style.display = "none";
        document.getElementById("chapter_container").style.display = 'block';
@@ -322,13 +328,10 @@
         return foundChapterContent;
       }
 
-    function addChapterCard(chapter) {
+    function createChapterCard(chapter) {
 
       // Tabelle mit dem existierenden HTML tbody und der Zeile (row) aus dem template Element instantiieren
       var card = document.querySelector('#text-card');
-
-      // Neue Zeile (row) klonen und in die Tabelle einfügen
-      var container = document.getElementById("chapter_container");
       
       var clone = document.importNode(card.content, true);
 
@@ -345,7 +348,7 @@
         clone.querySelector('.card_info').style.display = "none";
       }
 
-      container.appendChild(clone);
+      return clone;
     }
 
     function toggleBookmark(id) {
@@ -369,11 +372,18 @@
       jsonObj.forEach(function(chapter) {
         chapter.content.forEach(function(textCard) {
           if(bookmarks.indexOf(textCard.id) != -1) {
-            addChapterCard(textCard);
+            var bookmarkElement = createChapterCard(textCard);
+            var bookmarkText = bookmarkElement.querySelector('.card_text');
+
+            bookmarkText.addEventListener("click", function(){
+              goToBookmark(chapter.chapter_name);
+            });
+            bookmarkText.style.cursor = "pointer";
+
+            chapterContainer.appendChild(bookmarkElement);
           }
         });
       });
-
 
        document.getElementById("chapter_container").style.display = 'block';
        document.getElementById("chapter_container").classList.remove('pulseOutRight');
@@ -382,6 +392,10 @@
        //Animate main_Container move out left
        document.getElementById("main_container").classList.remove('pulseInLeftHalf');
        document.getElementById("main_container").classList.add('pulseOutLeftHalf');
+    }
+
+    function goToBookmark(chapterName) {
+     showChapter(chapterName);
     }
    </script>
 
