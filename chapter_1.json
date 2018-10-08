@@ -59,10 +59,65 @@
         "chapter_name":"Autorität",
         "content":[ 
             {
-                "type":"bible",
-                "text":"Chapter 2",
+                "type":"question",
+                "text":"Wo hast du gute und schlechte Autorität erlebt?",
                 "id":"201"
-            }
+            },
+            {
+              "type":"question",
+              "text":"Fallen dir Beispiele ein von Menschen, die sich Christen nennen aber nicht danach leben? Fallen dir auch gute Beispiele ein?",
+              "id":"202"
+            },
+            {
+              "type":"bible",
+              "text":"Jesus: „Was nennt ihr mich aber Herr, Herr, und tut nicht, was ich euch sage?“ (Lukas 6,46 ELB)",
+              "id":"203"
+            },
+            {
+              "type":"bible",
+              "text":"Nicht alle Menschen, die sich fromm gebärden, glauben an Gott. Auch wenn sie `Herr´ zu mir sagen, heißt das noch lange nicht, dass sie ins Himmelreich kommen. Entscheidend ist, ob sie meinem Vater im Himmel gehorchen.  (Matthäus 7,21)",
+              "id":"204"
+            },
+            {
+              "type":"question",
+              "text":"Kann ich etwas glauben ohne danach zu leben?",
+              "info":"In Jakobus steht, dass auch die Dämonen an Gott glauben bzw. ihn nicht leugnen",
+              "id":"205"
+          },
+          {
+              "type":"question",
+              "text":"Was heißt Glaube für dich?",
+              "id":"206"
+          },
+          {
+              "type":"question",
+              "text":"Was heißt Herrschaft Jesu in meinem Leben?",
+              "id":"207"
+          },
+          {
+              "type":"question",
+              "text":"Was ist Gottes Wille?",
+              "id":"208"
+          },
+          {
+              "type":"question",
+              "text":"Warum ist es wichtig den Willen Jesu zu tun?",
+              "id":"209"
+          },
+          {
+              "type":"question",
+              "text":"Wie kann ich den Willen Jesu tun?",
+              "id":"210"
+          },
+          {
+              "type":"bible",
+              "text":"Ich gebe euch ein neues Herz und einen neuen Geist: Das versteinerte Herz nehme ich aus eurer Brust und gebe euch ein lebendiges dafür. Ich lege meinen Geist in euch und bewirke, dass ihr meinen Gesetzen folgt und euch nach meinen Rechtsbestimmungen richtet. (Hesekiel 36,26-27)",
+              "id":"211"
+          },
+          {
+              "type":"action",
+              "text": "Glaube heißt sich Schritt für Schritt auf den Weg machen zum richtigen tun!"
+          }
         ]
     }
 ]
