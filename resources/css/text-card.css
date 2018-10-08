@@ -1,0 +1,100 @@
+#chapter_container {
+    background: #EEEEEE;
+    min-height: 100vh;
+
+    display: none;
+    max-width: 100%;
+    z-index: 1;
+}
+
+.card {
+    position: relative;
+    overflow: auto;
+
+    background-color: white;
+    padding-left: 5px;
+
+    margin: 5px;
+    margin-right: 2px;
+
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+}
+
+.card_main {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.card_icon {
+    flex: initial;
+    align-self: top;
+}
+
+.card_text {
+    flex: 1;
+    align-self: center;
+    padding-left: 10px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card_bookmark {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.card_bookmark input[type="checkbox"] {
+    display:none;
+}
+.card_bookmark input[type="checkbox"] + .icon {
+    background:url('../icons/bookmark-inactive.png') left top no-repeat;
+    height: 32px;
+    width: 32px;
+}
+
+.card_bookmark input[type="checkbox"]:checked +  .icon {
+    background:url('../icons/bookmark-active.png') left top no-repeat;
+}
+/* .card_bookmark input[type="checkbox"]:active +  .icon {
+    background:url('../icons/bookmark-hover.png') left top no-repeat;
+} */
+/* Lesezeichen rot, wenn angeklickt wird, Haken bleibt weg. */
+
+
+.icon {
+    margin-right: 12px;
+    margin-left: auto;
+}
+.card_info input[type="checkbox"] {
+    display:none;
+}
+.card_info input[type="checkbox"] + .icon {
+    background:url('../icons/arrow-down.png') left top no-repeat;
+    height: 32px;
+    width: 32px;
+}
+.card_arrow {
+    float: right;
+}
+.card_info input[type="checkbox"]:checked + .icon {
+    background:url('../icons/arrow-up.png') left top no-repeat;
+}
+.card_info_text_container {
+    max-height: 0;
+    overflow: hidden;
+
+	/* Set our transitions up. */
+	-webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+}
+.card_info input[type="checkbox"]:checked + .icon + .card_info_text_container {
+    max-height: 1000px;
+}

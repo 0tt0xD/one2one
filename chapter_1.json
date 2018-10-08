@@ -1,0 +1,68 @@
+[
+    {
+        "chapter_name":"Gottes Design und Plan",
+        "content": [
+            { 
+                "type":"question", 
+                "text":"Warum wurdest du geboren?",
+                "id":"101"
+              },
+              { 
+                "type":"bible", 
+                "text":"Und Gott sprach: Lasst uns Menschen machen in unserm Bild, uns ähnlich [...] Und Gott schuf den Menschen nach seinem Bild, nach dem Bild Gottes schuf er ihn; als Mann und Frau schuf er sie. 1.Mose 1,26-27",
+                "id":"102"
+              },
+              { 
+                "type":"question", 
+                "text":"Was heißt es in Gottes Bild geschaffen zu sein?",
+                "info":"nach seinem Wesen",
+                "id":"103"
+              },
+              { 
+                "type":"question", 
+                "text":"Wie würdest du Gott beschreiben? Wie kommst du zu dieser Ansicht?",
+                "id":"104"
+              },
+              { 
+                "type":"question", 
+                "text":"Welche Rückschlüsse kann ich auf Gottes Wesen schließen, dass er sein Ebenbild als Mann und Frau erschafft?",
+                "id":"105"
+              },
+              { 
+                "type":"question", 
+                "text":"Was zeichnet die Beziehung zwischen Mann und Frau aus?",
+                "id":"106"
+              },
+              { 
+                "type":"question", 
+                "text":"Was denkst du sollte unsere Beziehung mit Gott auszeichnen?",
+                "id":"107"
+              },
+              { 
+                "type":"bible", 
+                "text":"Jesus antwortete: „Du sollst den Herrn, deinen Gott, lieben, von ganzem Herzen, mit ganzer Seele und mit all deinen Gedanken! Das ist das erste und wichtigste Gebot. Ein weiteres ist genauso wichtig: Liebe deinen Nächsten wie dich selbst. >>Alle anderen Gebote und alle Forderungen der Propheten gründen sich auf diese beiden Gebote<< Matthäus 22,37-40",
+                "id":"108"
+              },
+              { 
+                "type":"question", 
+                "text":"Was würde passieren wenn wir das tun? Wie würde unsere Gesellschaft aussehen? Was würde das für Gesellschaftsbereiche wie Bildung, Medien, Wirtschaft, soziale Herausforderungen bedeuten?",
+                "id":"109"
+              },
+              { 
+                "type":"question", 
+                "text":"Glaubst du das das sinnstiftend ist?",
+                "id":"110"
+              }
+        ]
+    },
+    {
+        "chapter_name":"Autorität",
+        "content":[ 
+            {
+                "type":"bible",
+                "text":"Chapter 2",
+                "id":"201"
+            }
+        ]
+    }
+]

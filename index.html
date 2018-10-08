@@ -4,121 +4,330 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
 
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/text-card.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/chapter-card.css">
 
     <title>Titel</title>
   </head>
 
   <header>
-    <h3>One2One Basic</h3>
+    <div id="header_back" onClick="showMain()">
+      <img src="resources/icons/arrow-left.png" height="20" width="20" />
+    </div>
+    <div id="header_bookmark" onClick="showBookmarks()">
+        <img src="resources/icons/bookmark-active.png" height="20" width="20" />
+    </div>
+  
+    <div id="header_topic">
+      <h3>One2One Basic</h3>
+    </div>
+    <!-- <img src="resources/icons/search.png" height="32" width="32" /> -->
   </header>
 
+  <!-- *******************************************************************
+  *   HTML
+  ***********************************************************************-->
+
   <body>
-
-    <!-- First Card -->
-    <div class="card">
-      <div class="card_button">
-          <button>Info</button>
-          <button>Lesezeichen</button>
-      </div>
-
-      <div class="card_main">
-        <div class="card_icon">
-          ?
+        <div id="main_container">
+            <div id="main_cards"></div>
         </div>
+
+        <div id="chapter_container">
+
+        </div>
+  </body>
+
+  <!-- *******************************************************************
+  *   Template
+  ***********************************************************************-->
+
+  <template id="chapter_card">
+      <div class="chapter_card" onClick="showChapter(this.innerText)"> -->
+          Chapter 1
+      </div>
+  </template>
+
+  <template id="text-card">   
   
-        <div class="card_text">
-            Und Gott schuf den Menschen in seinem Bild, im Bild Gottes schuf er ihn; als Mann und Frau schuf er sie. 28 Und Gott segnete sie; und Gott sprach zu ihnen: Seid fruchtbar und mehrt euch und füllt die Erde und macht sie euch untertan; und herrscht über die Fische im Meer und über die Vögel des Himmels und über alles Lebendige, das sich regt auf der Erde!
-        </div> 
-
-      </div>
-
-      <div class="card_info">
-        <hr>
-        info...
-      </div>
-    </div>
-
-
-
-    <!-- Second Card -->
-    <div class="card">
-        <div class="card_button">
-            <button>Info</button>
-            <button>Lesezeichen</button>
-        </div>
+      <link rel="stylesheet" type="text/css" href="resources/css/text-card.css">
+          
+      <div class="card">
   
         <div class="card_main">
           <div class="card_icon">
-            ?
+            <img src="resources/icons/bible.png" class="card_icon_img" alt="bible vers" width="50" height="50">
           </div>
-    
+                  
           <div class="card_text">
-            Warum existieren wir und nicht einfach nichts?
-          </div> 
-  
-        </div>
-  
-        <div class="card_info">
-          <hr>
-          info...
-        </div>
-      </div>
-
-    
-
-    <!-- Third Card -->
-      <div class="card">
-          <div class="card_button">
-              <button>Info</button>
-              <button>Lesezeichen</button>
+            Und Gott schuf den Menschen in seinem Bild, im Bild Gottes schuf er ihn; als Mann und Frau schuf er sie. 28 Und Gott segnete sie; und Gott sprach zu ihnen: Seid fruchtbar und mehrt euch und füllt die Erde und macht sie euch untertan; und herrscht über die Fische im Meer und über die Vögel des Himmels und über alles Lebendige, das sich regt auf der Erde!
           </div>
-    
-          <div class="card_main">
-            <div class="card_icon">
-              ?
-            </div>
+          
+          <label class="card_bookmark">
+            <input type="checkbox" class="card_bookmark_checkbox" onClick="toggleBookmark(this.id)" />
+            <div class="icon"></div>
+          </label>
+          
+          </div>
+          
+            <label class="card_info">
       
-            <div class="card_text">
-                Und Gott schuf den Menschen in seinem Bild, im Bild Gottes schuf er ihn; als Mann und Frau schuf er sie. 28 Und Gott segnete sie; und Gott sprach zu ihnen: Seid fruchtbar und mehrt euch und füllt die Erde und macht sie euch untertan; und herrscht über die Fische im Meer und über die Vögel des Himmels und über alles Lebendige, das sich regt auf der Erde!
-            </div> 
-    
-          </div>
-    
-          <div class="card_info">
-            <hr>
-            info...
-          </div>
-        </div>
-
-
-
-    <!-- Forth Card -->
-        <div class="card">
-            <div class="card_button">
-                <button>Info</button>
-                <button>Lesezeichen</button>
-            </div>
-      
-            <div class="card_main">
-              <div class="card_icon">
-                ?
+              <input type="checkbox" />
+              <div class="icon"></div>
+  
+                <div class="card_info_text_container">
+                  <hr>    
+                  <div class="card_info_text">            
+                    info...
+                    <br>
+                    blubb
+                    <br>
+                    blubb
+                    <br>
+                    blubb
+                    <br>
+                    blubb
+                    <br>
+                    blubb
+                  </div>
               </div>
-        
-              <div class="card_text">
-                  Warum existieren wir und nicht einfach nichts?
-                </div> 
-      
-            </div>
-      
-            <div class="card_info">
-              <hr>
-              info...
-            </div>
+            </label>
           </div>
+      </template>
 
-  </body>
+  <!-- *******************************************************************
+  *   Java Script
+  ***********************************************************************-->
+
+<script>
+
+    var jsonObj = JSON.parse(`
+    [
+      {
+        "chapter_name":"Gottes Design und Plan",
+        "content": [
+            { 
+                "type":"question", 
+                "text":"Warum wurdest du geboren?",
+                "id":"101"
+              },
+              { 
+                "type":"bible", 
+                "text":"Und Gott sprach: Lasst uns Menschen machen in unserm Bild, uns ähnlich [...] Und Gott schuf den Menschen nach seinem Bild, nach dem Bild Gottes schuf er ihn; als Mann und Frau schuf er sie. 1.Mose 1,26-27",
+                "id":"102"
+              },
+              { 
+                "type":"question", 
+                "text":"Was heißt es in Gottes Bild geschaffen zu sein?",
+                "info":"nach seinem Wesen",
+                "id":"103"
+              },
+              { 
+                "type":"question", 
+                "text":"Wie würdest du Gott beschreiben? Wie kommst du zu dieser Ansicht?",
+                "id":"104"
+              },
+              { 
+                "type":"question", 
+                "text":"Welche Rückschlüsse kann ich auf Gottes Wesen schließen, dass er sein Ebenbild als Mann und Frau erschafft?",
+                "id":"105"
+              },
+              { 
+                "type":"question", 
+                "text":"Was zeichnet die Beziehung zwischen Mann und Frau aus?",
+                "id":"106"
+              },
+              { 
+                "type":"question", 
+                "text":"Was denkst du sollte unsere Beziehung mit Gott auszeichnen?",
+                "id":"107"
+              },
+              { 
+                "type":"bible", 
+                "text":"Jesus antwortete: „Du sollst den Herrn, deinen Gott, lieben, von ganzem Herzen, mit ganzer Seele und mit all deinen Gedanken! Das ist das erste und wichtigste Gebot. Ein weiteres ist genauso wichtig: Liebe deinen Nächsten wie dich selbst. >>Alle anderen Gebote und alle Forderungen der Propheten gründen sich auf diese beiden Gebote<< Matthäus 22,37-40",
+                "id":"108"
+              },
+              { 
+                "type":"question", 
+                "text":"Was würde passieren wenn wir das tun? Wie würde unsere Gesellschaft aussehen? Was würde das für Gesellschaftsbereiche wie Bildung, Medien, Wirtschaft, soziale Herausforderungen bedeuten?",
+                "id":"109"
+              },
+              { 
+                "type":"question", 
+                "text":"Glaubst du das das sinnstiftend ist?",
+                "id":"110"
+              }
+        ]
+    },
+    {
+        "chapter_name":"Autorität",
+        "content":[ 
+            {
+                "type":"bible",
+                "text":"Chapter 2",
+                "id":"201"
+            }
+        ]
+    }
+]
+    `);
+
+    var bookmarks = new Array();
+    loadBookmarks();
+
+    function loadBookmarks() {
+      var retrievedData = localStorage.getItem("bookmarks");
+
+      if(retrievedData == null) {
+        localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+      }
+      else {
+        bookmarks = JSON.parse(retrievedData);
+      }
+    }
+
+
+    // Browsersupport-Check, indem die Existenz des content Attributs
+     // des template Elements geprüft wird.
+     if ('content' in document.createElement('template')) {
+      // loadBookmarks();
+      renderMain();      
+  
+     } else {
+       window.alert("Fehler");
+     }
+
+     function showMain() {
+       window.scrollTo(0, 0);
+
+       document.getElementById("header_back").style.display = "none";
+       document.getElementById("header_bookmark").style.display = "block";
+
+      //  document.getElementById("chapter_container").style.display = 'none';
+      //  document.getElementById("chapter_container").style.display = 'block';
+       document.getElementById("chapter_container").classList.remove("pulseInRight")
+       document.getElementById("chapter_container").classList.add("pulseOutRight")
+       //document.getElementById("chapter_container").style.display = 'none';
+       document.getElementById("main_container").style.display = "flex";
+       document.getElementById("main_container").classList.remove("pulseInLeftHalf")
+       document.getElementById("main_container").classList.add("pulseInLeftHalf")
+       //document.getElementById("main_container").classList.add("pulseInLeft");
+     }
+
+     function renderMain() {
+       document.getElementById("header_bookmark").style.display = "block";
+
+       jsonObj.forEach(function(cardObj) {
+          // Tabelle mit dem existierenden HTML tbody und der Zeile (row) aus dem template Element instantiieren
+          var chapter_card = document.querySelector('#chapter_card');
+          
+          // Neue Zeile (row) klonen und in die Tabelle einfügen
+          var container = document.getElementById("main_container");
+          
+          var clone = document.importNode(chapter_card.content, true);
+
+          clone.querySelector('.chapter_card').innerText = cardObj.chapter_name;
+
+          container.appendChild(clone);
+       })
+        
+     }
+
+     function showChapter(chapterName) {
+       //chapterContainer leeren
+       document.getElementById("chapter_container").innerHTML = "";
+      //Back-Button einblenden
+      document.getElementById("header_back").style.display = "block";
+       document.getElementById("header_bookmark").style.display = "none";
+
+       var chapterContent = findChapter(chapterName);
+       chapterContent.forEach(addChapterCard);
+
+       //document.getElementById("main_container").style.display = "none";
+       document.getElementById("chapter_container").style.display = 'block';
+       document.getElementById("chapter_container").classList.remove('pulseOutRight');
+       document.getElementById("chapter_container").classList.add('pulseInRight');
+      
+       //Animate main_Container move out left
+       document.getElementById("main_container").classList.remove('pulseInLeftHalf');
+       document.getElementById("main_container").classList.add('pulseOutLeftHalf');
+     }
+
+     var foundChapterContent = null;
+     function findChapter(chapterName) {
+        jsonObj.forEach(function(element) {
+          if(element.chapter_name == chapterName) {
+            foundChapterContent = element.content;
+          }
+        });
+      
+        return foundChapterContent;
+      }
+
+    function addChapterCard(chapter) {
+
+      // Tabelle mit dem existierenden HTML tbody und der Zeile (row) aus dem template Element instantiieren
+      var card = document.querySelector('#text-card');
+
+      // Neue Zeile (row) klonen und in die Tabelle einfügen
+      var container = document.getElementById("chapter_container");
+      
+      var clone = document.importNode(card.content, true);
+
+      clone.querySelector('.card_text').innerText = chapter.text;
+      clone.querySelector('.card_info_text').innerText = chapter.info;
+      clone.querySelector('.card_icon_img').src = 'resources/icons/'+chapter.type+'.png';
+      clone.querySelector('.card_bookmark_checkbox').id = chapter.id;
+
+      if(bookmarks.indexOf(chapter.id) != -1) {
+        clone.querySelector('.card_bookmark_checkbox').checked = true;
+      }
+
+      if(chapter.info == null) {
+        clone.querySelector('.card_info').style.display = "none";
+      }
+
+      container.appendChild(clone);
+    }
+
+    function toggleBookmark(id) {
+      if(document.getElementById(id).checked) {
+        bookmarks.push(id);
+      }
+      else {
+        bookmarks.splice(bookmarks.indexOf(id), 1);
+      }
+
+      localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    }
+
+    function showBookmarks() {
+       //chapterContainer leeren
+       document.getElementById("chapter_container").innerHTML = "";
+      //Back-Button einblenden
+      document.getElementById("header_back").style.display = "block";
+       document.getElementById("header_bookmark").style.display = "none";
+
+      jsonObj.forEach(function(chapter) {
+        chapter.content.forEach(function(textCard) {
+          if(bookmarks.indexOf(textCard.id) != -1) {
+            addChapterCard(textCard);
+          }
+        });
+      });
+
+
+       document.getElementById("chapter_container").style.display = 'block';
+       document.getElementById("chapter_container").classList.remove('pulseOutRight');
+       document.getElementById("chapter_container").classList.add('pulseInRight');
+      
+       //Animate main_Container move out left
+       document.getElementById("main_container").classList.remove('pulseInLeftHalf');
+       document.getElementById("main_container").classList.add('pulseOutLeftHalf');
+    }
+   </script>
 
 </html>
