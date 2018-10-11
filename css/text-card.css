@@ -1,10 +1,12 @@
 #chapter_container {
-    background: #EEEEEE;
-    min-height: 100vh;
+    background: #eeeeee;
 
     display: none;
     max-width: 100%;
+    min-height: 90vh;
     z-index: 1;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .card {
@@ -28,6 +30,7 @@
     justify-content: center;
     padding-top: 10px;
     padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 .card_icon {
@@ -35,32 +38,39 @@
     align-self: top;
 }
 
+.card_name {
+    margin-left: 0px;
+    margin-right: auto;
+    display: none;
+}
+
 .card_text {
     flex: 1;
     align-self: center;
     padding-left: 10px;
-    padding-right: 50px;
-    padding-bottom: 15px;
-
-    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 30px;
+    padding-bottom: 10px;
 }
 
 .card_bookmark {
     position: absolute;
     right: 0;
     top: 0;
+
+    margin-right: 12px;
+    margin-left: auto;
 }
 .card_bookmark input[type="checkbox"] {
     display:none;
 }
-.card_bookmark input[type="checkbox"] + .icon {
+.card_bookmark input[type="checkbox"] + .card_bookmark_icon {
     background:url('../icons/bookmark-inactive.png') left top no-repeat;
-    height: 32px;
-    width: 32px;
+    background-size: 100%;
 }
 
-.card_bookmark input[type="checkbox"]:checked +  .icon {
+.card_bookmark input[type="checkbox"]:checked +  .card_bookmark_icon {
     background:url('../icons/bookmark-active.png') left top no-repeat;
+    background-size: 100%;
 }
 /* .card_bookmark input[type="checkbox"]:active +  .icon {
     background:url('../icons/bookmark-hover.png') left top no-repeat;
@@ -68,33 +78,47 @@
 /* Lesezeichen rot, wenn angeklickt wird, Haken bleibt weg. */
 
 
-.icon {
-    margin-right: 12px;
-    margin-left: auto;
+.card_bookmark_icon {
+    width: 20px;
+    height: 20px;
 }
 .card_info input[type="checkbox"] {
     display:none;
 }
-.card_info input[type="checkbox"] + .icon {
+.card_info input[type="checkbox"] + .card_info_icon {
     background:url('../icons/arrow-down.png') left top no-repeat;
-    height: 32px;
-    width: 32px;
+    background-size: 100%;
 }
-.card_arrow {
-    float: right;
+
+.card_info_icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 12px;
+
+    height: 20px;
+    width: 20px;
 }
-.card_info input[type="checkbox"]:checked + .icon {
+
+.card_info input[type="checkbox"]:checked + .card_info_icon {
     background:url('../icons/arrow-up.png') left top no-repeat;
+    background-size: 100%;
 }
 .card_info_text_container {
     max-height: 0;
     overflow: hidden;
 
-	/* Set our transitions up. */
+	/* Set our transitions up. 
 	-webkit-transition: max-height 0.8s;
 	-moz-transition: max-height 0.8s;
-	transition: max-height 0.8s;
+	transition: max-height 0.8s;*/
 }
-.card_info input[type="checkbox"]:checked + .icon + .card_info_text_container {
+.card_info_text {
+
+    padding-left: 43px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+.card_info input[type="checkbox"]:checked + .card_info_icon + .card_info_text_container {
     max-height: 1000px;
 }
