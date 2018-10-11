@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="de">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
+
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/text-card.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/chapter-card.css">
+    <script type="text/javascript" src="resources/js/pressure.min.js"></script>
+
+    <title>Titel</title>
+  </head>
+
+  <header>
+    <div id="header_back" onClick="showMain()">
+      <img src="resources/icons/arrow-left.png" height="20" width="20" />
+    </div>
+  
+    <div id="header_topic">
+      one 2 one basic
+    </div>
+    <!-- <img src="resources/icons/search.png" height="32" width="32" /> -->
+  </header>
+
+  <!-- *******************************************************************
+  *   HTML
+  ***********************************************************************-->
+
+  <body>
+        <div id="main_container">      
+          <div class="main_card" id="id-name"> 
+            <img src="resources/icons/instruction.png" width="32" height="32">
+          </div>
+          <div class="main_card" onClick="showBookmarks()"> 
+                <img src="resources/icons/bookmark-active.png" width="25" height="25">
+            </div>
+        </div>
+
+        <div id="chapter_container">
+
+        </div>
+  </body>
+
+  <!-- *******************************************************************
+  *   Template
+  ***********************************************************************-->
+
+  <template id="chapter_card">
+      <div class="chapter_card" onClick="showChapter(this.innerText, this.value)"> 
+        <div class="chapter_card_content" >
+            <div class="chapter_card_content_table" >
+                <div class="chapter_card_content_table_cell" >
+                  Chapter 1
+                </div>
+            </div>
+        </div>
+      </div>
+  </template>
+
+  <template id="text-card">   
+  
+      <link rel="stylesheet" type="text/css" href="resources/css/text-card.css">
+          
+      <div class="card">
+  
+        <div class="card_name">
+          Name
+        </div>
+
+        <div class="card_main">
+
+          <div class="card_icon">
+            <img src="resources/icons/bible.png" class="card_icon_img" alt="bible vers" width="25" height="25">
+          </div>
+                  
+          <div class="card_text">
+            Und Gott schuf den Menschen in seinem Bild, im Bild Gottes schuf er ihn; als Mann und Frau schuf er sie. 28 Und Gott segnete sie; und Gott sprach zu ihnen: Seid fruchtbar und mehrt euch und füllt die Erde und macht sie euch untertan; und herrscht über die Fische im Meer und über die Vögel des Himmels und über alles Lebendige, das sich regt auf der Erde!
+          </div>
+          
+          <label class="card_bookmark">
+            <input type="checkbox" class="card_bookmark_checkbox" onClick="toggleBookmark(this.id)" />
+            <div class="card_bookmark_icon"></div>
+          </label>
+          
+          </div>
+          
+            <label class="card_info">
+      
+              <input type="checkbox" />
+              <div class="card_info_icon"></div>
+  
+                <div class="card_info_text_container">
+                  <hr>    
+                  <div class="card_info_text">            
+                    info...
+                    <br>
+                    blubb
+                    <br>
+                    blubb
+                    <br>
+                    blubb
+                    <br>
+                    blubb
+                    <br>
+                    blubb
+                  </div>
+              </div>
+            </label>
+          </div>
+      </template>
+
+  <!-- *******************************************************************
+  *   Java Script
+  ***********************************************************************-->
+
+<script>
+
+    var jsonObj = JSON.parse(`
+    [
+    {
+        "chapter_name":"Gottes Design und Plan",
+        "content": [
+            { 
+                "type":"question", 
+                "text":"Warum wurdest du geboren?",
+                "id":"101"
+              },
+              { 
+                "type":"bible", 
+                "text":"1.Mose 1,26-27",
+                "info":"Und Gott sprach: Lasst uns Menschen machen in unserm Bild, uns ähnlich [...] Und Gott schuf den Menschen nach seinem Bild, nach dem Bild Gottes schuf er ihn; als Mann und Frau schuf er sie.",
+                "id":"102"
+              },
+              { 
+                "type":"question", 
+                "text":"Was heißt es in Gottes Bild geschaffen zu sein?",
+                "info":"nach seinem Wes^en",
+                "id":"103"
+              },
+              { 
+                "type":"question", 
+                "text":"Wie würdest du Gott beschreiben? Wie kommst du zu dieser Ansicht?",
+                "id":"104"
+              },
+              { 
+                "type":"question", 
+                "text":"Welche Rückschlüsse kann ich auf Gottes Wesen schließen, dass er sein Ebenbild als Mann und Frau erschafft?",
+                "id":"105"
+              },
+              { 
+                "type":"question", 
+                "text":"Was zeichnet die Beziehung zwischen Mann und Frau aus?",
+                "id":"106"
+              },
+              { 
+                "type":"question", 
+                "text":"Was denkst du sollte unsere Beziehung mit Gott auszeichnen?",
+                "id":"107"
+              },
+              { 
+                "type":"bible", 
+                "text":"Matthäus 22,37-40",
+                "info":"Jesus antwortete: Du sollst den Herrn, deinen Gott, lieben, von ganzem Herzen, mit ganzer Seele und mit all deinen Gedanken! Das ist das erste und wichtigste Gebot. Ein weiteres ist genauso wichtig: Liebe deinen Nächsten wie dich selbst. Alle anderen Gebote und alle Forderungen der Propheten gründen sich auf diese beiden Gebote",
+                "id":"108"
+              },
+              { 
+                "type":"question", 
+                "text":"Was würde passieren wenn wir das tun? Wie würde unsere Gesellschaft aussehen? Was würde das für Gesellschaftsbereiche wie Bildung, Medien, Wirtschaft, soziale Herausforderungen bedeuten?",
+                "id":"109"
+              },
+              { 
+                "type":"question", 
+                "text":"Glaubst du das das sinnstiftend ist?",
+                "id":"110"
+              }
+        ]
+    },
+    {
+        "chapter_name":"Autorität",
+        "content":[ 
+            {
+                "type":"question",
+                "text":"Wo hast du gute und schlechte Autorität erlebt?",
+                "id":"201"
+            },
+            {
+              "type":"question",
+              "text":"Fallen dir Beispiele ein von Menschen, die sich Christen nennen aber nicht danach leben? Fallen dir auch gute Beispiele ein?",
+              "id":"202"
+            },
+            {
+              "type":"bible",
+              "text":"Lukas 6,46",
+              "info":"Jesus: „Was nennt ihr mich aber Herr, Herr, und tut nicht, was ich euch sage?“ (ELB)",
+              "id":"203"
+            },
+            {
+              "type":"bible",
+              "text":"Matthäus 7,21",
+              "info":"Nicht alle Menschen, die sich fromm gebärden, glauben an Gott. Auch wenn sie Herr zu mir sagen, heißt das noch lange nicht, dass sie ins Himmelreich kommen. Entscheidend ist, ob sie meinem Vater im Himmel gehorchen.",
+              "id":"204"
+            },
+            {
+              "type":"question",
+              "text":"Kann ich etwas glauben ohne danach zu leben?",
+              "info":"In Jakobus steht, dass auch die Dämonen an Gott glauben bzw. ihn nicht leugnen",
+              "id":"205"
+          },
+          {
+              "type":"question",
+              "text":"Was heißt Glaube für dich?",
+              "id":"206"
+          },
+          {
+              "type":"question",
+              "text":"Was heißt Herrschaft Jesu in meinem Leben?",
+              "id":"207"
+          },
+          {
+              "type":"question",
+              "text":"Was ist Gottes Wille?",
+              "id":"208"
+          },
+          {
+              "type":"question",
+              "text":"Warum ist es wichtig den Willen Jesu zu tun?",
+              "id":"209"
+          },
+          {
+              "type":"question",
+              "text":"Wie kann ich den Willen Jesu tun?",
+              "id":"210"
+          },
+          {
+              "type":"bible",
+              "text":"Ich gebe euch ein neues Herz und einen neuen Geist: Das versteinerte Herz nehme ich aus eurer Brust und gebe euch ein lebendiges dafür. Ich lege meinen Geist in euch und bewirke, dass ihr meinen Gesetzen folgt und euch nach meinen Rechtsbestimmungen richtet. (Hesekiel 36,26-27)",
+              "id":"211"
+          },
+          {
+              "type":"action",
+              "text": "Glaube heißt sich Schritt für Schritt auf den Weg machen zum richtigen tun!"
+          }
+        ]
+    }
+]
+    `);
+
+  
+    // Neue Zeile (row) klonen und in die Tabelle einfügen
+    var chapterContainer = document.getElementById("chapter_container");
+
+    var bookmarks = new Array();
+    loadBookmarks();
+
+    function loadBookmarks() {
+      var retrievedData = localStorage.getItem("bookmarks");
+
+      if(retrievedData == null) {
+        localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+      }
+      else {
+        bookmarks = JSON.parse(retrievedData);
+      }
+    }
+
+
+    // Browsersupport-Check, indem die Existenz des content Attributs
+     // des template Elements geprüft wird.
+     if ('content' in document.createElement('template')) {
+      // loadBookmarks();
+      renderMain();      
+  
+     } else {
+       window.alert("Fehler");
+     }
+
+     function showMain() {
+       //Title setzen
+       document.getElementById("header_topic").innerText = "one 2 one basic";
+       window.scrollTo(0, 0);
+
+       document.getElementById("header_back").style.display = "none";
+      
+       swipeLeft("main_container", "chapter_container");
+     }
+
+     function renderMain() {
+
+      var index = 0;
+       jsonObj.forEach(function(cardObj) {
+          // Tabelle mit dem existierenden HTML tbody und der Zeile (row) aus dem template Element instantiieren
+          var chapter_card = document.querySelector('#chapter_card');
+          
+          // Neue Zeile (row) klonen und in die Tabelle einfügen
+          var container = document.getElementById("main_container");
+          
+          var clone = document.importNode(chapter_card.content, true);
+
+          clone.querySelector('.chapter_card_content_table_cell').innerText = cardObj.chapter_name;
+          clone.querySelector('.chapter_card').value = index;
+
+          container.appendChild(clone);
+
+          index = index + 1;
+       })
+        
+     }
+
+     function showChapter(chapterName, index) {
+       //Title setzen
+       document.getElementById("header_topic").innerText = chapterName;
+
+       //chapterContainer leeren
+       document.getElementById("chapter_container").innerHTML = "";
+      //Back-Button einblenden
+      document.getElementById("header_back").style.display = "block";
+
+       var chapterContent = jsonObj[index];
+       chapterContent.content.forEach(function(chapterItem) {
+            chapterContainer.appendChild(createChapterCard(chapterItem));
+         });
+
+      //3D-Touch event for bookmarks
+      Pressure.set('.card_bookmark_icon', {
+        startDeepPress: function(event){
+          var bookmarkName = prompt("enter name", "");
+
+          document.getElementById(this.value).checked = true;
+          toggleBookmark(this.value, bookmarkName);
+        }
+      });
+
+      swipeRight("chapter_container", "main_container");
+     }
+
+     var foundChapterContent = null;
+     function findChapter(chapterName) {
+        jsonObj.forEach(function(element) {
+          if(element.chapter_name == chapterName) {
+            foundChapterContent = element.content;
+          }
+        });
+      
+        return foundChapterContent;
+      }
+
+    function createChapterCard(chapter) {
+
+      // Tabelle mit dem existierenden HTML tbody und der Zeile (row) aus dem template Element instantiieren
+      var card = document.querySelector('#text-card');
+      
+      var clone = document.importNode(card.content, true);
+
+      clone.querySelector('.card_main').id = "card_main_" + chapter.id;
+      clone.querySelector('.card_text').innerText = chapter.text;
+      clone.querySelector('.card_info_text').innerText = chapter.info;
+      clone.querySelector('.card_icon_img').src = 'resources/icons/'+chapter.type+'.png';
+      clone.querySelector('.card_bookmark_checkbox').id = chapter.id;
+      clone.querySelector('.card_bookmark_icon').value = chapter.id;
+
+      if(bookmarks.findIndex(item => item.id == chapter.id) != -1) {
+        clone.querySelector('.card_bookmark_checkbox').checked = true;
+      }
+
+      if(chapter.info == null) {
+        clone.querySelector('.card_info').style.display = "none";
+      }
+
+      return clone;
+    }
+
+    function toggleBookmark(id, name="") {
+      if(document.getElementById(id).checked) {
+        var bookmarkObject = {
+          id: id,
+          name: name
+        };
+        bookmarks.push(bookmarkObject);
+      }
+      else {
+        bookmarks.splice(bookmarks.findIndex(item => item.id == id), 1);
+      }
+
+      localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    }
+
+    function showBookmarks() {
+      //Title setzen
+      document.getElementById("header_topic").innerText = "Meine Lesezeichen"
+
+       //chapterContainer leeren
+       document.getElementById("chapter_container").innerHTML = "";
+      //Back-Button einblenden
+      document.getElementById("header_back").style.display = "block";
+
+      jsonObj.forEach(function(chapter) {
+        chapter.content.forEach(function(textCard) {
+          var bookmarkObj = bookmarks[bookmarks.findIndex(item => item.id == textCard.id)];
+
+          if(bookmarkObj != null) {
+            var bookmarkElement = createChapterCard(textCard);
+            var bookmarkText = bookmarkElement.querySelector('.card_text');
+
+            if(bookmarkObj.name != "") {
+              var cardName = bookmarkElement.querySelector('.card_name');
+              cardName.innerText = bookmarkObj.name;
+              cardName.style.display = "block";
+            }
+
+            bookmarkText.addEventListener("click", function(){
+              goToBookmark(chapter.chapter_name, textCard.id);
+            });
+            bookmarkText.style.cursor = "pointer";
+
+            chapterContainer.appendChild(bookmarkElement);
+          }
+        });
+      });
+
+      swipeRight("chapter_container", "main_container");
+    }
+
+    function goToBookmark(chapterName, id) {
+      showChapter(chapterName);
+      var goToCard = document.getElementById("card_main_" + id);
+      goToCard.scrollIntoView();
+    }
+
+    function swipeRight(newContainer, currentContainer) {       
+       document.getElementById(newContainer).style.display = 'block';
+       document.getElementById(newContainer).classList.remove('pulseOutRight');
+       document.getElementById(newContainer).classList.add('pulseInRight');
+      
+       //Animate main_Container move out left
+       document.getElementById(currentContainer).classList.remove('pulseInLeftHalf');
+       document.getElementById(currentContainer).classList.add('pulseOutLeftHalf');
+    }
+
+    function swipeLeft(newContainer, currentContainer) {
+       document.getElementById(currentContainer).classList.remove("pulseInRight")
+       document.getElementById(currentContainer).classList.add("pulseOutRight")
+       
+       document.getElementById(newContainer).style.display = "block";
+       document.getElementById(newContainer).classList.remove("pulseInLeftHalf")
+       document.getElementById(newContainer).classList.add("pulseInLeftHalf")
+    }
+   </script>
+
+</html>
