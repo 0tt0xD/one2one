@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -247,7 +247,6 @@
     }
 ]
     `);
-
   
     // Neue Zeile (row) klonen und in die Tabelle einfügen
     var chapterContainer = document.getElementById("chapter_container");
@@ -374,6 +373,12 @@
 
     function toggleBookmark(id, name="") {
       if(document.getElementById(id).checked) {
+      //Löschen falls vorhanden
+      var existingIndex = bookmarks.findIndex(item => item.id == id);
+      if(existingIndex != -1) {
+        bookmarks.splice(existingIndex, 1);
+      }
+		
         var bookmarkObject = {
           id: id,
           name: name
@@ -411,7 +416,8 @@
             }
 
             bookmarkText.addEventListener("click", function(){
-              goToBookmark(chapter.chapter_name, textCard.id);
+			  var chapterIndex = jsonObj.findIndex(item => item.chapter_name == chapter.chapter_name);
+              goToBookmark(chapter.chapter_name, chapterIndex, textCard.id);
             });
             bookmarkText.style.cursor = "pointer";
 
@@ -423,10 +429,11 @@
       swipeRight("chapter_container", "main_container");
     }
 
-    function goToBookmark(chapterName, id) {
-      showChapter(chapterName);
+    function goToBookmark(chapterName, chapterIndex, id) {
+      showChapter(chapterName, chapterIndex);
       var goToCard = document.getElementById("card_main_" + id);
       goToCard.scrollIntoView();
+      window.scrollBy(0, -56);
     }
 
     function swipeRight(newContainer, currentContainer) {       
