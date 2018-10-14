@@ -39,8 +39,10 @@
 }
 
 .card_name {
-    margin-left: 0px;
+    margin-top: 2px;
+    margin-left: 2px;
     margin-right: auto;
+    font-weight: bold;
     display: none;
 }
 

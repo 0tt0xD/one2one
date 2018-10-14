@@ -46,6 +46,29 @@ body {
     margin-top: 56px;
 }
 
+@media only screen and (min-width: 600px) {
+    #chapter_container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #main_container {
+        padding-left: 12.5%;
+        min-width: 75%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #chapter_container {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    #main_container {
+        padding-left: 20%;
+        min-width: 60%;
+    }
+}
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
