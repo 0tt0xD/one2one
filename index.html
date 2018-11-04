@@ -107,7 +107,7 @@
             
 
             <label class="card_bookmark">
-              <input type="checkbox" class="card_bookmark_checkbox" onClick="toggleBookmark(this.id)" />
+              <input type="checkbox" class="card_bookmark_checkbox" ondblclick="nameBookmark(this.id)" onClick="toggleBookmark(this.id)" />
               <div class="card_bookmark_icon"></div>
             </label>
           </div>
@@ -326,10 +326,7 @@
       //3D-Touch event for bookmarks
       Pressure.set('.card_bookmark_icon', {
         startDeepPress: function(event){
-          var bookmarkName = prompt("enter name", "");
-
-          document.getElementById(this.value).checked = true;
-          toggleBookmark(this.value, bookmarkName);
+          nameBookmark(this.value);
         }
       });
 
@@ -391,6 +388,13 @@
       }
 
       localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    }
+
+    function nameBookmark(id) {
+      var bookmarkName = prompt("enter name", "");
+
+      document.getElementById(id).checked = true;
+      toggleBookmark(id, bookmarkName);
     }
 
     function showBookmarks() {
