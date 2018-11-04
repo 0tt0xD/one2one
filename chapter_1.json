@@ -1,43 +1,48 @@
 [
     {
-        "chapter_name":"Gottes Design und Plan",
+        "chapter_name":"Design",
         "content": [
-            { 
+              { 
                 "type":"question", 
-                "text":"Warum wurdest du geboren?",
+                "text":"Warum wurdest du geboren, mit welchem Sinn?",
                 "id":"101"
+              }, 
+              { 
+                "type":"question", 
+                "text":"Wie würdest du den christlichen Gott beschreiben? Wie kommst du zu dieser Ansicht?",
+                "id":"102"
               },
               { 
                 "type":"bible", 
                 "text":"1.Mose 1,26-27",
                 "info":"Und Gott sprach: Lasst uns Menschen machen in unserm Bild, uns ähnlich [...] Und Gott schuf den Menschen nach seinem Bild, nach dem Bild Gottes schuf er ihn; als Mann und Frau schuf er sie.",
-                "id":"102"
-              },
-              { 
-                "type":"question", 
-                "text":"Was heißt es in Gottes Bild geschaffen zu sein?",
-                "info":"nach seinem Wes^en",
                 "id":"103"
               },
               { 
                 "type":"question", 
-                "text":"Wie würdest du Gott beschreiben? Wie kommst du zu dieser Ansicht?",
+                "text":"Was hast du bereits darüber gehört was es heißt in Gottes Bild geschaffen zu sein?",
+                "info":"Wir sind nach seinem Wesen geschaffen, nach seiner Art, seinem Charakter.",
                 "id":"104"
               },
               { 
                 "type":"question", 
-                "text":"Welche Rückschlüsse kann ich auf Gottes Wesen schließen, dass er sein Ebenbild als Mann und Frau erschafft?",
+                "text":"Inwiefern reflektieren wir Gottes Ebenbild, was haben wir mit ihm gemeinsam?",
                 "id":"105"
               },
               { 
                 "type":"question", 
-                "text":"Was zeichnet die Beziehung zwischen Mann und Frau aus?",
+                "text":"Was denkst du, warum spricht Gott von „uns“?",
                 "id":"106"
               },
               { 
                 "type":"question", 
-                "text":"Was denkst du sollte unsere Beziehung mit Gott auszeichnen?",
+                "text":"Was zeichnet eine partnerschaftliche Beziehung zwischen Mann und Frau aus?",
                 "id":"107"
+              },
+              { 
+                "type":"question", 
+                "text":"Warum schafft Gott sein Ebenbild als die Beziehung zwischen Mann und Frau?",
+                "id":"108"
               },
               { 
                 "type":"bible", 
@@ -47,80 +52,164 @@
               },
               { 
                 "type":"question", 
-                "text":"Was würde passieren wenn wir das tun? Wie würde unsere Gesellschaft aussehen? Was würde das für Gesellschaftsbereiche wie Bildung, Medien, Wirtschaft, soziale Herausforderungen bedeuten?",
+                "text":"Durch was soll die Verbindung von uns Menschen zu Gott geprägt sein?",
                 "id":"109"
               },
               { 
                 "type":"question", 
-                "text":"Glaubst du das das sinnstiftend ist?",
+                "text":"Wie würde unsere Gesellschaft aussehen, wenn wir diesem Gebot folgen? Was würde das für Gesellschaftsbereiche wie Bildung, Medien, Wirtschaft, soziale Herausforderungen bedeuten? Wie würden unsere Beziehungen aussehen?",
                 "id":"110"
+              },
+              { 
+                "type":"question", 
+                "text":"Was sagt das gelesene Gebot und die daraus resultierenden Folgen für die Gesellschaft über das Gottes Wesen aus?",
+                "id":"111"
+              },
+              { 
+                "type":"question", 
+                "text":"Wie wichtig sind Beziehungen, egal zu wem, in deinem Leben? Wer sind deine wichtigsten Beziehungen? Könntest du dir das Leben auf der Erde alleine ohne Mensch und Gott vorstellen?",
+                "id":"112"
+              },
+              { 
+                "type":"question", 
+                "text":"Was sind emotionale Grundbedürfnisse des Menschen?",
+                "id":"113"
+              },
+              { 
+                "type":"question", 
+                "text":"Warum ist Liebe so ein wichtiges Thema in unserer Gesellschaft? Woran erkennst du das?",
+                "id":"114"
+              },
+              { 
+                "type":"question", 
+                "text":"Sind wir geschaffen um geliebt zu werden? Wie wichtig ist es für Menschen angenommen zu sein? Woran erkennst du das?",
+                "id":"115"
+              },
+              { 
+                "type":"question", 
+                "text":"Was sagt das alles über Gott aus?",
+                "id":"116"
+              },
+              { 
+                "type":"question", 
+                "text":"Zu welchem Beziehungsverhältnis mit Gott sind wir berufen/bestimmt?",
+                "id":"117"
+              },
+              { 
+                "type":"bible", 
+                "text":"Epheser 1,5",
+                "info":"Aus Liebe hat er uns dazu bestimmt, seine Söhne und Töchter zu werden – durch Jesus Christus und im Blick auf ihn",
+                "id":"118"
+              },
+              { 
+                "type":"prayer", 
+                "text":"Familie, Beziehungen, Freunde",
+                "id":"118"
               }
         ]
     },
     {
-        "chapter_name":"Autorität",
+        "chapter_name":"Errettung",
         "content":[ 
             {
                 "type":"question",
-                "text":"Wo hast du gute und schlechte Autorität erlebt?",
+                "text":"Ist die Welt in der wir leben gerecht, warum bzw. warum nicht und was läuft schief?",
                 "id":"201"
             },
             {
               "type":"question",
-              "text":"Fallen dir Beispiele ein von Menschen, die sich Christen nennen aber nicht danach leben? Fallen dir auch gute Beispiele ein?",
+              "text":"Was denkst du fordert Gott von uns Menschen,? Denkst du du bist ein guter Mensch und warum? Welchen Maßstab legst du dabei an? Erfüllst du deine eigenen Maßstäbe?",
               "id":"202"
             },
             {
               "type":"bible",
-              "text":"Lukas 6,46",
-              "info":"Jesus: „Was nennt ihr mich aber Herr, Herr, und tut nicht, was ich euch sage?“ (ELB)",
+              "text":"Matthäus 15,19",
+              "info":"Denn aus dem Herzen kommen böse Gedanken, Mord, Ehebruch, Unzucht, Diebstahl, falsche Zeugenaussagen und Lästerungen.",
               "id":"203"
             },
             {
-              "type":"bible",
-              "text":"Matthäus 7,21",
-              "info":"Nicht alle Menschen, die sich fromm gebärden, glauben an Gott. Auch wenn sie Herr zu mir sagen, heißt das noch lange nicht, dass sie ins Himmelreich kommen. Entscheidend ist, ob sie meinem Vater im Himmel gehorchen.",
+              "type":"question",
+              "text":"Kannst du dieser Bibelstelle zustimmen, warum oder warum nicht? Gehen alle Gedanken in die Tat über? Sind sie deshalb weniger böse? Was hält uns davon ab, dass wir böse Gedanken nicht in die Tat umsetzen?",
               "id":"204"
             },
             {
-              "type":"question",
-              "text":"Kann ich etwas glauben ohne danach zu leben?",
-              "info":"In Jakobus steht, dass auch die Dämonen an Gott glauben bzw. ihn nicht leugnen",
+              "type":"bible",
+              "text":"Römer 6,23",
+              "info":"Denn der Lohn der Sünde ist der Tod; das unverdiente Geschenk Gottes dagegen ist das ewige Leben durch Christus Jesus, unseren Herrn.",
               "id":"205"
           },
           {
               "type":"question",
-              "text":"Was heißt Glaube für dich?",
+              "text":"Was ist Sünde? Was meint die Bibelstelle mit „Tod“?",
+              "info":"Sünde ist die Trennung von Gott. Gott ist vollkommen gut und nichts Böses kann vor ihm bestehen, daher ist die Beziehung zu ihm gestört.",
               "id":"206"
           },
           {
               "type":"question",
-              "text":"Was heißt Herrschaft Jesu in meinem Leben?",
+              "text":"Wäre Gott gerecht wenn er Sünden nicht verurteilt?",
               "id":"207"
           },
           {
               "type":"question",
-              "text":"Was ist Gottes Wille?",
+              "text":"Was sind die Auswirkungen von Sünden in unserem Leben, in der Gesellschaft und unseren Beziehungen? (Diebstahl, Mord, Lügen, Neid, Hass, Unvergebenheit, Eifersucht…)",
               "id":"208"
           },
           {
               "type":"question",
-              "text":"Warum ist es wichtig den Willen Jesu zu tun?",
+              "text":"Wie gehst du mit eigener Schuld in deinem Leben um? Warum gehst du so damit um?",
               "id":"209"
           },
           {
               "type":"question",
-              "text":"Wie kann ich den Willen Jesu tun?",
+              "text":"Kann man Wiedergutmachung leisten? Wo geht das nicht und warum? Welchen Ausweg gibt es für solche Fälle?",
               "id":"210"
           },
           {
-              "type":"bible",
-              "text":"Ich gebe euch ein neues Herz und einen neuen Geist: Das versteinerte Herz nehme ich aus eurer Brust und gebe euch ein lebendiges dafür. Ich lege meinen Geist in euch und bewirke, dass ihr meinen Gesetzen folgt und euch nach meinen Rechtsbestimmungen richtet. (Hesekiel 36,26-27)",
+              "type":"question",
+              "text":"Was ist das ewige Leben? Wann fängt das ewige Leben an?",
               "id":"211"
           },
           {
+              "type":"question",
+              "text":"Wie bekommen wir das Geschenk des ewigen Lebens?",
+              "id":"212"
+          },
+          {
+              "type":"bible",
+              "text":"Lukas 23,39-43",
+              "info":"Auch einer der Verbrecher, die mit ihm gekreuzigt worden waren, lästerte: »Bist du denn nicht der Christus, der versprochene Retter? Dann hilf dir selbst und uns!« Aber der am anderen Kreuz wies ihn zurecht: »Du bist genauso zum Tode verurteilt worden wie dieser Mann. Fürchtest du Gott nicht einmal jetzt? Wir werden hier zu Recht bestraft. Wir bekommen, was wir verdient haben. Der hier aber ist unschuldig; er hat nichts Böses getan.« Dann sagte er: »Jesus, denk an mich, wenn du deine Herrschaft antrittst!« Da antwortete ihm Jesus: »Ich versichere dir: Noch heute wirst du mit mir im Paradies sein.«",
+              "id":"213"
+          },
+          {
+              "type":"question",
+              "text":"Denkst du er hat ein Gutes Leben geführt?",
+              "id":"214"
+          },
+          {
+              "type":"question",
+              "text":"Was unterscheidet die beiden Verbrecher?",
+              "id":"215"
+          },
+          {
+              "type":"question",
+              "text":"Wieso wurde der zweite Verbrecher gerettet?",
+              "id":"216"
+          },
+          {
+              "type":"bible",
+              "text":"2. Korinther 5,21",
+              "info":"Denn Gott hat Christus, der ohne jede Sünde war, mit all unserer Schuld beladen und verurteilt, damit wir freigesprochen sind und vor ihm bestehen können.",
+              "id":"217"
+          },
+          {
               "type":"action",
-              "text": "Glaube heißt sich Schritt für Schritt auf den Weg machen zum richtigen tun!"
+              "text": "Was hält dich davon ab das Geschenk Jesu, von dem wir gesprochen haben, anzunehmen?",
+              "id":"218"
+          },
+          { 
+              "type":"prayer", 
+              "text":"Errettung, vertrauen, Vergebung",
+              "id":"219"
           }
         ]
     }
