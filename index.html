@@ -70,6 +70,12 @@
       </div>
   </template>
 
+  <template id="subtitle-container">
+    <div class="subtitle_container">
+       <p class="subtitle_title">HelloWorld!</p> 
+    </div>
+  </template>
+
   <template id="text-card">   
   
       <link rel="stylesheet" type="text/css" href="resources/css/text-card.css">
@@ -134,7 +140,11 @@
     {
         "chapter_name":"Gottes Design und Plan",
         "content": [
-            { 
+            {
+              "subtitle":"Gott und der Mensch",
+              "id":10,
+              "content": [
+              { 
                 "type":"question", 
                 "text":"Warum wurdest du geboren?",
                 "id":"101"
@@ -170,7 +180,12 @@
                 "type":"question", 
                 "text":"Was denkst du sollte unsere Beziehung mit Gott auszeichnen?",
                 "id":"107"
-              },
+              }]
+            },
+            {
+              "subtitle":"Subtitle 2",
+              "id":11,
+              "content": [
               { 
                 "type":"bible", 
                 "text":"Matthäus 22,37-40",
@@ -186,12 +201,17 @@
                 "type":"question", 
                 "text":"Glaubst du das das sinnstiftend ist?",
                 "id":"110"
-              }
+              }]
+            }
         ]
     },
     {
         "chapter_name":"Autorität",
         "content":[ 
+          {
+            "subtitle":"Subtitle",
+            "id":20,
+            "content":[
             {
                 "type":"question",
                 "text":"Wo hast du gute und schlechte Autorität erlebt?",
@@ -253,6 +273,7 @@
           {
               "type":"action",
               "text": "Glaube heißt sich Schritt für Schritt auf den Weg machen zum richtigen tun!"
+          }]
           }
         ]
     }
@@ -329,8 +350,15 @@
       document.getElementById("header_back").style.display = "block";
 
        var chapterContent = jsonObj[index];
-       chapterContent.content.forEach(function(chapterItem) {
-            chapterContainer.appendChild(createChapterCard(chapterItem));
+       chapterContent.content.forEach(function(subTitle) {
+            var subTitleContainer = createSubtitleContainer(subTitle);
+            chapterContainer.appendChild(subTitleContainer);
+            var cont = document.getElementById("subtitle_" + subTitle.id);
+
+            subTitle.content.forEach(function(chapterItem) {
+              cont.appendChild(createChapterCard(chapterItem));
+            });
+
          });
 
       //3D-Touch event for bookmarks
@@ -375,6 +403,15 @@
       if(chapter.info == null) {
         clone.querySelector('.card_info').style.display = "none";
       }
+
+      return clone;
+    }
+
+    function createSubtitleContainer(subtitle) {
+      var subContainer = document.querySelector('#subtitle-container');
+      var clone = document.importNode(subContainer.content, true);
+      clone.querySelector(".subtitle_container").id = "subtitle_" + subtitle.id;
+      clone.querySelector(".subtitle_title").innerText = subtitle.subtitle;
 
       return clone;
     }
