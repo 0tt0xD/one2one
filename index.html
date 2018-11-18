@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" type="text/css" href="resources/css/text-card.css">
     <link rel="stylesheet" type="text/css" href="resources/css/chapter-card.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/subtitle-container.css">
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     <script type="text/javascript" src="resources/js/pressure.min.js"></script>
 
@@ -71,14 +72,18 @@
   </template>
 
   <template id="subtitle-container">
-    <div class="subtitle_container">
-       <p class="subtitle_title">HelloWorld!</p> 
+    <div class="subtitle_div">
+      <input class="subtitle_checkbox" type="checkbox"/>
+      <label class="subtitle_label"></label>
+        
+      <div class="subtitle_content">
+        <div class="subtitle_inner"></div>
+      </div>
     </div>
   </template>
 
   <template id="text-card">   
   
-      <link rel="stylesheet" type="text/css" href="resources/css/text-card.css">
           
       <div class="card">
   
@@ -410,8 +415,11 @@
     function createSubtitleContainer(subtitle) {
       var subContainer = document.querySelector('#subtitle-container');
       var clone = document.importNode(subContainer.content, true);
-      clone.querySelector(".subtitle_container").id = "subtitle_" + subtitle.id;
-      clone.querySelector(".subtitle_title").innerText = subtitle.subtitle;
+      clone.querySelector(".subtitle_inner").id = "subtitle_" + subtitle.id;
+      clone.querySelector(".subtitle_label").innerText = subtitle.subtitle;
+      clone.querySelector(".subtitle_checkbox").id = "subtitle_checkbox_" + subtitle.id;
+      clone.querySelector(".subtitle_label").htmlFor = "subtitle_checkbox_" + subtitle.id;
+
 
       return clone;
     }
