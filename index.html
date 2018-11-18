@@ -461,7 +461,8 @@
       //Back-Button einblenden
       document.getElementById("header_back").style.display = "block";
 
-      jsonObj.forEach(function(chapter) {
+      jsonObj.forEach(function(subtitle) {
+        subtitle.content.forEach(function(chapter) {
         chapter.content.forEach(function(textCard) {
           var bookmarkObj = bookmarks[bookmarks.findIndex(item => item.id == textCard.id)];
 
@@ -469,20 +470,21 @@
             var bookmarkElement = createChapterCard(textCard);
             var bookmarkText = bookmarkElement.querySelector('.card_text');
 
-            if(bookmarkObj.name != "") {
+            if(bookmarkObj.name != "" && bookmarkObj.name != null) {
               var cardName = bookmarkElement.querySelector('.card_name');
               cardName.innerText = bookmarkObj.name;
               cardName.style.display = "block";
             }
 
             bookmarkText.addEventListener("click", function(){
-			  var chapterIndex = jsonObj.findIndex(item => item.chapter_name == chapter.chapter_name);
+			        var chapterIndex = jsonObj.findIndex(item => item.chapter_name == chapter.chapter_name);
               goToBookmark(chapter.chapter_name, chapterIndex, textCard.id);
             });
             bookmarkText.style.cursor = "pointer";
 
             chapterContainer.appendChild(bookmarkElement);
           }
+        });
         });
       });
 
