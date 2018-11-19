@@ -461,9 +461,9 @@
       //Back-Button einblenden
       document.getElementById("header_back").style.display = "block";
 
-      jsonObj.forEach(function(subtitle) {
-        subtitle.content.forEach(function(chapter) {
-        chapter.content.forEach(function(textCard) {
+      jsonObj.forEach(function(chapter) {
+        chapter.content.forEach(function(subtitle) {
+        subtitle.content.forEach(function(textCard) {
           var bookmarkObj = bookmarks[bookmarks.findIndex(item => item.id == textCard.id)];
 
           if(bookmarkObj != null) {
@@ -478,7 +478,7 @@
 
             bookmarkText.addEventListener("click", function(){
 			        var chapterIndex = jsonObj.findIndex(item => item.chapter_name == chapter.chapter_name);
-              goToBookmark(chapter.chapter_name, chapterIndex, textCard.id);
+              goToBookmark(chapter.chapter_name, chapterIndex, textCard.id, subtitle.id);
             });
             bookmarkText.style.cursor = "pointer";
 
@@ -491,8 +491,10 @@
       swipeRight("chapter_container", "main_container");
     }
 
-    function goToBookmark(chapterName, chapterIndex, id) {
+    function goToBookmark(chapterName, chapterIndex, id, subtitleId) {
       showChapter(chapterName, chapterIndex);
+      document.getElementById("subtitle_checkbox_" + subtitleId).checked = true;
+
       var goToCard = document.getElementById("card_main_" + id);
       goToCard.scrollIntoView();
       window.scrollBy(0, -56);
