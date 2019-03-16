@@ -124,7 +124,7 @@
     {
         "chapter_name":"Errettung",
         "content":[ 
-          {
+        {
             "subtitle":"Einstieg",
             "content":[
             {
@@ -167,7 +167,8 @@
             {
                 "type":"question",
                 "text":"Was hält uns davon ab, dass wir böse Gedanken nicht in die Tat umsetzen?"
-            },
+            }]
+          },
           {
             "subtitle":"Trennung und Versöhnung /// Tod und Leben /// Gerechtigkeit und Ungerechtigkeit ///  Sünde und Errettung",
             "content":[
@@ -245,6 +246,122 @@
             {
                 "type":"bible",
                 "text":"Was hält dich davon ab das Geschenk Jesu, von dem wir gesprochen haben, anzunehmen?"
+                }]
+            }
+        ]
+    },
+
+
+
+
+
+
+    {
+        "chapter_name":"Herrschaft und Nachfolge",
+        "content":[ 
+        {
+            "subtitle":"Einstieg",
+            "content":[
+            {
+                "type":"question",
+                "text":"Wo hast du gute und schlechte Leiterschaft erlebt?"
+            },
+            {
+                "type":"question",
+                "text":"Was brauchst du um jemandem zu folgen?"
+            },
+            {
+                "type":"bible",
+                "text":"Lukas 6, 46 (Elb)",
+                "info":"Jesus: „Was nennt ihr mich aber Herr, Herr, und tut nicht, was ich euch sage?“"
+            },
+            {
+                "type":"bible",
+                "text":"Matthäus 7, 21",
+                "info":"Nicht alle Menschen, die sich fromm gebärden, glauben an Gott. Auch wenn sie `Herr´ zu mir sagen, heißt das noch lange nicht, dass sie ins Himmelreich kommen. Entscheidend ist, ob sie meinem Vater im Himmel gehorchen."
+            },
+            {
+                "type":"question",
+                "text":"Was verlangt Jesus von seinen Nachfolgern?"
+            },
+            {
+                "type":"question",
+                "text":"“Practice what you preach” - warum?"
+            },
+            {
+                "type":"question",
+                "text":"Was heißt das Wort „Glauben“ für dich und wie hängt es mit deinem Handeln zusammen?"
+            },
+            {
+                "type":"bible",
+                "text":"Apostelgeschichte 2, 36",
+                "info":"So soll nun jedermann in Israel sicher wissen, dass Gott diesen Jesus, den ihr gekreuzigt habt, zum Herrn und Christus gemacht hat!"
+            },
+            {
+                "type":"question",
+                "text":"Unter welchen Bedingungen kannst du einem Herrscher vertrauen?"
+            },
+            {
+                "type":"question",
+                "text":"Von wem und wofür ist Jesus zum Herrn gemacht worden?"
+            },
+            {
+                "type":"youttube",
+                "text":"<a>https://youtu.be/TDCCElmQu60</a>"
+            }]
+          },
+          {
+            "subtitle":"Nach Gottes Willen leben",
+            "content":[
+            {
+                "type":"question",
+                "text":"Denkst du es ist anstrengend Jesus nachzufolgen und seine Gebote zu befolgen und warum?"
+            },
+            {
+                "type":"bible",
+                "text":"Hesekiel 36, 26-27",
+                "info":"Ich gebe euch ein neues Herz und einen neuen Geist: Das versteinerte Herz nehme ich aus eurer Brust und gebe euch ein lebendiges dafür. Ich lege meinen Geist in euch und bewirke, dass ihr meinen Gesetzen folgt und euch nach meinen Rechtsbestimmungen richtet."
+            },
+            {
+                "type":"question",
+                "text":"Hast du schon einmal Dinge erlebt, die das Herz hart machen?"
+            },
+            {
+                "type":"question",
+                "text":"Was bedeutet es ein lebendiges Herz zu haben?"
+            },
+            {
+                "type":"question",
+                "text":"Wie ist es möglich nach Gottes Willen leben? Ist Scheitern erlaubt?"
+            },
+            {
+                "type":"question",
+                "text":"Was ist der Kerngedanke dieses Kapitels gewesen?"
+            }]
+          },
+          {
+            "subtitle":"Das Zentrum von Jesu Willen",
+            "content":[
+            {
+                "type":"bible",
+                "text":"Matthäus 22, 37",
+                "info":"esus antwortete: „Du sollst den Herrn, deinen Gott, lieben, von ganzem Herzen, mit ganzer Seele und mit all deinen Gedanken!"
+            },
+            {
+                "type":"question",
+                "text":"Kann man Liebe befehlen?"
+            },
+            {
+                "type":"question",
+                "text":"Was hat das befolgen von Jesu Geboten mit unserem Verstand und unseren Gefühlen zu tun?"
+            },
+            {
+                "type":"question",
+                "text":"Ist es blinder Glaube oder darf ich meinen Verstand/Gedanken gebrauchen?"
+            },
+            {
+                "type":"question",
+                "text":"Wie denkst du würde dein Leben aussehen, wenn Jesus dort Herr wäre? Möchtest du Prioritäten ändern?"
             }]
           }
         ]
