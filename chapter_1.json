@@ -284,7 +284,7 @@
             {
                 "type":"bible",
                 "text":"Matthäus 7, 21",
-                "info":"Nicht alle Menschen, die sich fromm gebärden, glauben an Gott. Auch wenn sie `Herr´ zu mir sagen, heißt das noch lange nicht, dass sie ins Himmelreich kommen. Entscheidend ist, ob sie meinem Vater im Himmel gehorchen."
+                "info":"Nicht alle Menschen, die sich fromm gebärden, glauben an Gott. Auch wenn sie “Herr“ zu mir sagen, heißt das noch lange nicht, dass sie ins Himmelreich kommen. Entscheidend ist, ob sie meinem Vater im Himmel gehorchen."
             },
             {
                 "type":"question",
@@ -312,8 +312,9 @@
                 "text":"Von wem und wofür ist Jesus zum Herrn gemacht worden?"
             },
             {
-                "type":"youttube",
-                "text":"<a>https://youtu.be/TDCCElmQu60</a>"
+                "type":"youtube",
+                "text":"Themenvideo: Der Messias",
+                "link":"https://youtu.be/TDCCElmQu60"
             }]
           },
           {
