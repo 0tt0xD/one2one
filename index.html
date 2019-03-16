@@ -284,12 +284,36 @@
     }
 ]
     `);
-  
+    
+    setupJson(jsonObj);
+
     // Neue Zeile (row) klonen und in die Tabelle einfügen
     var chapterContainer = document.getElementById("chapter_container");
 
     var bookmarks = new Array();
     loadBookmarks();
+
+    function setupJson(json) {
+      var chapterId = 1000;
+      jsonObj.forEach(function(chapter) {
+          chapter.id = chapterId;
+
+          var subtitleId = chapterId + 100;
+          chapter.content.forEach(function(subtitle){
+            subtitle.id = subtitleId;
+            
+            var cardId = subtitleId + 10;
+            subtitle.content.forEach(function(card) {
+              card.id = cardId;
+              cardId = cardId + 10;
+            })
+
+            subtitleId = subtitleId + 100;
+          })
+
+          chaoterId = chapterId + 1000;
+       });       
+    }
 
     function loadBookmarks() {
       var retrievedData = localStorage.getItem("bookmarks");
