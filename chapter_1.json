@@ -256,6 +256,12 @@
 
 
 
+
+
+
+
+
+
     {
         "chapter_name":"Herrschaft und Nachfolge",
         "content":[ 
@@ -362,6 +368,78 @@
             {
                 "type":"question",
                 "text":"Wie denkst du würde dein Leben aussehen, wenn Jesus dort Herr wäre? Möchtest du Prioritäten ändern?"
+            }]
+          }
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+    {
+        "chapter_name":"Umkehr zu Gott",
+        "content":[ 
+        {
+            "subtitle":"Einstieg",
+            "content":[
+            {
+                "type":"question",
+                "text":"Was waren deine drei schönsten Erlebnisse mit deinem Vater?"
+            },
+            {
+                "type":"question",
+                "text":"Was hättest du dir von deinem Vater gewünscht?"
+            },
+            {
+                "type":"bible",
+                "text":"Geschichte verlorener Sohn (Bibel)"
+            },
+            {
+                "type":"question",
+                "text":"Wie würdest du das Verhalten des Sohnes beschreiben, der den Vater verlässt. Was ist seine Motivation?"
+            },
+            {
+                "type":"question",
+                "text":"Was denkst du wie sich der Vater fühlt, als sein Sohn ihn verlässt?"
+            },
+            {
+                "type":"question",
+                "text":"Warum kehrt der Sohn um?"
+            },
+            {
+                "type":"question",
+                "text":"Wie verhält der Vater sich als sein Sohn zurückkommt? Was überrascht dich?"
+            },
+            {
+                "type":"question",
+                "text":"Denkst du dieses Erlebnis hat den Sohn verändert, warum bzw. warum nicht?"
+            },
+            {
+                "type":"question",
+                "text":"Was denkst du treibt ihn in Zukunft an ein „guter Sohn“ zu sein und bei Fehlern immer wieder umzukehren?"
+            },
+            {
+                "type":"action",
+                "text":"Darf ich meine Geschichte zur Umkehr zu Gott mit dir teilen?"
+            },
+            {
+                "type":"question",
+                "text":"Was glaubst du persönlich wie Gott dich empfangen wird, wenn du umkehrst?"
+            },
+            {
+                "type":"question",
+                "text":"Was glaubst du ist der Herzschlag des Vaters für dich, was will er für dein Leben?"
+            },
+            {
+                "type":"question",
+                "text":"Wie ist deine Beziehung zu Gott im Moment? Kennst du ihn?"
             }]
           }
         ]
