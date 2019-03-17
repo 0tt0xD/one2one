@@ -75,7 +75,7 @@
 }
 @media only screen and (max-width: 600px) {
     .chapter_card_name {
-        font-size: 10pt;
+        font-size: 13pt;
     }
 }
 /* .chapter_card:before{
