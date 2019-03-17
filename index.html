@@ -1289,7 +1289,9 @@
        document.getElementById(currentContainer).classList.remove('pulseInLeftHalf');
        document.getElementById(currentContainer).classList.add('pulseOutLeftHalf');
 
-      document.getElementById(newContainer).style.height = "1000px"; //document.getElementById(currentContainer).style.height; 
+      setTimeout(function() {
+        document.getElementById(currentContainer).style.display = 'none';
+      }, 400);
     }
 
     function swipeLeft(newContainer, currentContainer) {
@@ -1301,7 +1303,9 @@
        document.getElementById(newContainer).classList.remove("pulseInLeftHalf")
        document.getElementById(newContainer).classList.add("pulseInLeftHalf")
 
-       document.getElementById(newContainer).style.height = "1000px"; //document.getElementById(currentContainer).style.height; 
+      setTimeout(function() {
+        document.getElementById(currentContainer).style.display = 'none';
+      }, 400);
     }
 
    </script>
