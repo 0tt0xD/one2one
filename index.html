@@ -82,15 +82,13 @@
   <template id="chapter_card">
       <div class="chapter_card" onClick="showChapter(this.innerText, this.value)"> 
         <div class="chapter_card_content" >
-            <div class="chapter_card_content_table" >                  
-              <div class="chapter_card_icon" >
-                <img src="resources/icons/bible.png" class="chapter_card_icon_img" alt="icon" width="50" height="50">
-                </div>   
-                <div class="chapter_card_content_table_cell" >               
-                  Chapter 1
+            <div class="chapter_card_content_table" >             
+                <div class="chapter_card_content_table_cell" >  
+                    <img src="resources/icons/bible.png" class="chapter_card_icon" alt="icon">                   
                 </div>
             </div>
         </div>
+        <div class="chapter_card_name">Chapter 1</div>
       </div>
   </template>
 
@@ -1103,9 +1101,9 @@
           
           var clone = document.importNode(chapter_card.content, true);
 
-          clone.querySelector('.chapter_card_content_table_cell').innerText = cardObj.chapter_name;
+          clone.querySelector('.chapter_card_name').innerText = cardObj.chapter_name;
           clone.querySelector('.chapter_card').value = index;
-          clone.querySelector('.chapter_card_icon_img').src = 'resources/icons/'+cardObj.icon;
+          clone.querySelector('.chapter_card_icon').src = 'resources/icons/'+cardObj.icon;
 
           container.appendChild(clone);
 
