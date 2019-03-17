@@ -16,6 +16,7 @@
     <meta charset="utf-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
 
+    <link rel="stylesheet" type="text/css" href="resources/css/introduction.css">
     <link rel="stylesheet" type="text/css" href="resources/css/text-card.css">
     <link rel="stylesheet" type="text/css" href="resources/css/chapter-card.css">
     <link rel="stylesheet" type="text/css" href="resources/css/subtitle-container.css">
@@ -58,6 +59,24 @@
   <!-- *******************************************************************
   *   Template
   ***********************************************************************-->
+
+  <template id="introduction_content">
+    <div id="introduction_content"> 
+      Unser Herz schlägt dafür Menschen die Möglichkeit zu geben sich für oder gegen den Glauben an den christlichen Gott zu entscheiden, um den es in allen Kapiteln gehen soll. Diese Entscheidung soll nicht auf Vorurteilen oder Hörensagen basieren.  ,daher laden wir dich ein, mit uns anhand dieses Gesprächsleitfadens über die Grundthemen des christlichen Glaubens zu reden.
+
+      <br>
+
+      Wir schlagen 4 Elemente für unsere Treffen vor: 
+
+      <ol>
+        <li>nach oben: wofür sind wir dankbar</li>
+        <li>nach hinten: worüber haben wir letztes Mal gesprochen, habe ich wir Herausforderung vom letzten Mal umgesetzt und wie ging es uns dabei?</li>
+        <li>nach innen: Input für heute anhand des one 2 one basics</li>
+        <li>nach außen: welche Herausforderungen will ich für mich annehmen</li>
+      </ol>
+    </div>
+  </template>
+
 
   <template id="chapter_card">
       <div class="chapter_card" onClick="showChapter(this.innerText, this.value)"> 
@@ -1243,7 +1262,9 @@
       //Back-Button einblenden
       document.getElementById("header_back").style.display = "block";
 
-      document.getElementById("chapter_container").innerHTML = "HelloWorld!";
+      var intorduction = document.querySelector('#introduction_content');
+      var clone = document.importNode(intorduction.content, true);
+      document.getElementById("chapter_container").appendChild(clone);
 
       swipeRight("chapter_container", "main_container");
     }
@@ -1266,8 +1287,8 @@
        //Animate main_Container move out left
        document.getElementById(currentContainer).classList.remove('pulseInLeftHalf');
        document.getElementById(currentContainer).classList.add('pulseOutLeftHalf');
-       
-      document.getElementById(currentContainer).style.display = "none";
+
+      document.getElementById(newContainer).style.height = "1000px"; //document.getElementById(currentContainer).style.height; 
     }
 
     function swipeLeft(newContainer, currentContainer) {
@@ -1279,7 +1300,7 @@
        document.getElementById(newContainer).classList.remove("pulseInLeftHalf")
        document.getElementById(newContainer).classList.add("pulseInLeftHalf")
 
-      document.getElementById(currentContainer).style.display = "none";
+       document.getElementById(newContainer).style.height = "1000px"; //document.getElementById(currentContainer).style.height; 
     }
 
    </script>
