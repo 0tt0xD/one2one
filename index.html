@@ -587,6 +587,125 @@
             }]
           }
         ]
+    },
+    {
+        "chapter_name":"Die Taufen",
+        "content":[ 
+        {
+            "subtitle":"Einstieg",
+            "content":[
+            {
+                "type":"question",
+                "text":"Hast du dir schon einmal gewünscht nochmals neu anfangen zu können oder eine andere Person zu sein und warum?"
+            }]
+        },
+        {
+          "subtitle":"Die Wassertaufe",
+          "content":[
+            {
+                "type":"question",
+                "text":"Was weißt du über die Taufe, was verbindest du damit?"
+            },
+            {
+                "type":"question",
+                "text":"Soll die Taufe deine eigene Entscheidung sein?"
+            },
+            {
+                "type":"question",
+                "text":"Gibt es Parallelen zwischen einer Hochzeit und der Taufe, wenn ja welche?"
+            },
+            {
+                "type":"bible",
+                "text":"Apg. 2, 37-38",
+                "info":"Als die Leute das [die Pfingstpredigt] hörten, waren sie von dieser Botschaft tief betroffen. Sie fragten Petrus und die anderen Apostel: »Brüder, was sollen wir tun?« »Kehrt um zu Gott!«, forderte Petrus sie auf. »Jeder von euch soll sich auf den Namen von Jesus Christus taufen lassen! Dann wird euch Gott eure Sünden vergeben, und ihr werdet den Heiligen Geist empfangen."
+            },
+            {
+                "type":"bible",
+                "text":"Römer. 6, 3-4",
+                "info":"Oder wisst ihr nicht, dass wir mit Jesus Christus gestorben sind, als wir auf seinen Namen getauft wurden? Denn durch die Taufe sind wir mit Christus gestorben und begraben. Und genauso wie Christus durch die herrliche Macht des Vaters von den Toten auferstanden ist, so können auch wir jetzt ein neues Leben führen."
+            },
+            {
+                "type":"question",
+                "text":"Wer soll sich taufen lassen und aus welcher Motivation?"
+            },
+            {
+                "type":"question",
+                "text":"“...gestorben und begraben” was bedeutet das im Zusammenhang mit der Taufe?"
+            },
+            {
+                "type":"question",
+                "text":"Wenn wir ein neues Leben führen sollen, was war das Alte und was ist das Neue?"
+            },
+            {
+                "type":"question",
+                "text":"Welchen Beitrag sollen wir in unserer eigenen Taufe leisten?"
+            },
+            {
+                "type":"question",
+                "text":"Durch welche Kraft sollen wir das neue Leben leben? Wie wird diese Kraft genannt?"
+            }]
+        },
+        {
+          "subtitle":"Taufe im Heiligen Geist",
+          "content":[
+            {
+                "type":"bible",
+                "text":"Matthäus 3, 11",
+                "info":"Johannes der Täufer: Ich taufe all diejenigen mit Wasser, die ihren Sünden den Rücken kehren und sich Gott zuwenden. Doch bald kommt einer, der ist viel stärker als ich - so viel gewaltiger, dass ich nicht einmal wert bin, sein Diener zu sein. Er wird euch mit dem Heiligen Geist und mit Feuer taufen."
+            },
+            {
+                "type":"question",
+                "text":"Was hast du bisher über die Taufe im Heiligen Geist gehört?"
+            },
+            {
+                "type":"question",
+                "text":"Was denkst du heißt es im heiligen Geist und Feuer getauft zu sein?"
+            },
+            {
+                "type":"bible",
+                "text":"Lukas 11, 13",
+                "info":"Wenn aber selbst ihr sündigen Menschen wisst, wie ihr euren Kindern Gutes tun könnt, wie viel eher wird euer Vater im Himmel denen, die ihn bitten, den Heiligen Geist schenken."
+            },
+            {
+                "type":"bible",
+                "text":"Apg. 8, 17",
+                "info":"Petrus und Johannes legten den Gläubigen nun die Hände auf, und sie empfingen den Heiligen Geist. Apostelgeschichte"
+            },
+            {
+                "type":"question",
+                "text":"Wann kann diese Taufe passieren und wodurch geschieht sie?"
+            },
+            {
+                "type":"bible",
+                "text":"1. Korinther 14,1.3-5",
+                "info":"Die Liebe soll euer höchstes Ziel sein. Aber bemüht euch auch um die besonderen Gaben, die der Geist zuteilt, vor allem um die Gabe der Prophetie... Wer dagegen prophetisch redet, der hilft anderen, im Glauben an den Herrn zu wachsen, und er ermutigt und tröstet sie. Wenn jemand in anderen Sprachen redet, wird er selbst dadurch im Glauben gestärkt; doch wer prophetisch redet, der stärkt die ganze Gemeinde. Ich wünschte, ihr alle hättet die Gabe, in Sprachen zu reden, aber noch mehr wünschte ich, ihr könntet alle prophetisch reden. Denn die Gabe der Prophetie ist wichtiger und nützlicher als das Reden in Sprachen, es sei denn, jemand erklärt den anderen, was es bedeutet, damit die ganze Gemeinde dadurch ermutigt wird."
+            },
+            {
+                "type":"question",
+                "text":"Was ist für dich neu in dieser Bibelstelle?"
+            },
+            {
+                "type":"question",
+                "text":"Was sagt dein gesunder Menschenverstand über diese Bibelstelle?"
+            },
+            {
+                "type":"question",
+                "text":"Wovon ist dein Verstand geprägt, wer oder was sagt dir was „normal“ ist?"
+            },
+            {
+                "type":"question",
+                "text":"Wozu schenkt Gott Christen diese Gaben?"
+            },
+            {
+                "type":"question",
+                "text":"Denkst du, du hast eine dieser Gaben?"
+            },
+            {
+                "type":"question",
+                "text":"Würdest du gerne im hl. Geist getauft werden?"
+            }]
+        }
+        ]
     }
 ]
     `);
@@ -836,7 +955,8 @@
       window.scrollBy(0, -56);
     }
 
-    function swipeRight(newContainer, currentContainer) {       
+    function swipeRight(newContainer, currentContainer) {  
+       window.scrollTo(0, 0);     
        document.getElementById(newContainer).style.display = 'block';
        document.getElementById(newContainer).classList.remove('pulseOutRight');
        document.getElementById(newContainer).classList.add('pulseInRight');
@@ -844,15 +964,20 @@
        //Animate main_Container move out left
        document.getElementById(currentContainer).classList.remove('pulseInLeftHalf');
        document.getElementById(currentContainer).classList.add('pulseOutLeftHalf');
+       
+       document.getElementById(currentContainer).style.display = "none";
     }
 
     function swipeLeft(newContainer, currentContainer) {
+       window.scrollTo(0, 0);
        document.getElementById(currentContainer).classList.remove("pulseInRight")
        document.getElementById(currentContainer).classList.add("pulseOutRight")
        
        document.getElementById(newContainer).style.display = "block";
        document.getElementById(newContainer).classList.remove("pulseInLeftHalf")
        document.getElementById(newContainer).classList.add("pulseInLeftHalf")
+       
+       document.getElementById(currentContainer).style.display = "none";
     }
    </script>
 
