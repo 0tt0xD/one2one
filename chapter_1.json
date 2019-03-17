@@ -785,5 +785,71 @@
             }]
           }
         ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+        {
+        "chapter_name":"Lebendiger Glaube",
+        "content":[ 
+        {
+            "subtitle":"Einstieg",
+            "content":[
+            {
+                "type":"question",
+                "text":"Wie geht es dir nach allem, was wir bisher miteinander geredet haben?"
+            },
+            {
+                "type":"question",
+                "text":"Haben sich Ansichten geändert von dir, welche und warum?"
+            },
+            {
+                "type":"question",
+                "text":"Was hat sich als Vorurteil herausgestellt?"
+            },
+            {
+                "type":"bible",
+                "text":"2. Thessalonicher 2, 13",
+                "info":"Immer wieder danken wir Gott dafür, dass ihr seine Botschaft, die ihr von uns gehört habt, nicht als Menschenwort betrachtet habt; ihr habt sie als das aufgenommen, was sie ja tatsächlich ist, als Gottes Wort. Und nun entfaltet dieses Wort seine Kraft in eurem Leben, weil ihr ihm Glauben geschenkt habt."
+            },
+            {
+                "type":"question",
+                "text":"Was ist der Unterschied zwischen dem, was Menschen sagen und dem Reden Gottes?"
+            },
+            {
+                "type":"question",
+                "text":"Wer sagt dir wer du bist? Welche Gründe gibt es das zu glauben?"
+            },
+            {
+                "type":"question",
+                "text":"Wenn du an deine nahestehendsten Personen denkst (Vater, Mutter, Freund/in…), was sind die Hauptaussagen dieser Menschen über dich als Person, was hörst du sie sagen?"
+            },
+            {
+                "type":"question",
+                "text":"Wie sehr haben dich diese Aussagen in deinem Leben definiert?"
+            },
+            {
+                "type":"question",
+                "text":"n welchen Situationen wirst du an bestimmte Stimmen erinnert?"
+            },
+            {
+                "type":"question",
+                "text":"Was sagt Jesus über dein Leben? <br> Du bist geliebt… <br> Dir ist vergeben… <br> Du bist neu gemacht... <br> Du bist ein Kind Gottes… <br> Du bist ein Bürger des Himmels… <br> Du wirst gebraucht..."
+            },
+            {
+                "type":"question",
+                "text":"Was bedeutet es, deine Identität als Kind Gottes anzunehmen und so zu leben?"
+            }]
+          }
+        ]
     }
 ]
