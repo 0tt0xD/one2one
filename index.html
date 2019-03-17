@@ -82,8 +82,11 @@
   <template id="chapter_card">
       <div class="chapter_card" onClick="showChapter(this.innerText, this.value)"> 
         <div class="chapter_card_content" >
-            <div class="chapter_card_content_table" >
-                <div class="chapter_card_content_table_cell" >
+            <div class="chapter_card_content_table" >                  
+              <div class="chapter_card_icon" >
+                <img src="resources/icons/bible.png" class="chapter_card_icon_img" alt="icon" width="50" height="50">
+                </div>   
+                <div class="chapter_card_content_table_cell" >               
                   Chapter 1
                 </div>
             </div>
@@ -164,6 +167,7 @@
     [
     {
         "chapter_name":"Design",
+        "icon":"tree.png",
         "content": [
             {
               "subtitle":"Wir Mensch",
@@ -286,6 +290,7 @@
 
     {
         "chapter_name":"Errettung",
+        "icon":"cross.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
@@ -427,6 +432,7 @@
 
     {
         "chapter_name":"Herrschaft und Nachfolge",
+        "icon":"crown.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
@@ -549,6 +555,7 @@
 
     {
         "chapter_name":"Umkehr zu Gott",
+        "icon":"cross.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
@@ -621,6 +628,7 @@
 
     {
         "chapter_name":"Die Taufen",
+        "icon":"holy-spirit.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
@@ -755,6 +763,7 @@
 
     {
         "chapter_name":"Kommunikation mit Gott",
+        "icon":"pray.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
@@ -865,6 +874,7 @@
 
         {
         "chapter_name":"Gemeinde",
+        "icon":"church.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
@@ -963,6 +973,7 @@
 
         {
         "chapter_name":"Lebendiger Glaube",
+        "icon":"heart.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
@@ -1094,6 +1105,7 @@
 
           clone.querySelector('.chapter_card_content_table_cell').innerText = cardObj.chapter_name;
           clone.querySelector('.chapter_card').value = index;
+          clone.querySelector('.chapter_card_icon_img').src = 'resources/icons/'+cardObj.icon;
 
           container.appendChild(clone);
 

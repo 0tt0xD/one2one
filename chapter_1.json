@@ -1,6 +1,7 @@
 [
     {
         "chapter_name":"Design",
+        "icon":"tree.png",
         "content": [
             {
               "subtitle":"Wir Mensch",
@@ -123,6 +124,7 @@
 
     {
         "chapter_name":"Errettung",
+        "icon":"cross.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
@@ -264,6 +266,7 @@
 
     {
         "chapter_name":"Herrschaft und Nachfolge",
+        "icon":"crown.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
@@ -386,6 +389,7 @@
 
     {
         "chapter_name":"Umkehr zu Gott",
+        "icon":"cross.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
@@ -458,6 +462,7 @@
 
     {
         "chapter_name":"Die Taufen",
+        "icon":"holy-spirit.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
@@ -592,6 +597,7 @@
 
     {
         "chapter_name":"Kommunikation mit Gott",
+        "icon":"pray.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
@@ -702,6 +708,7 @@
 
         {
         "chapter_name":"Gemeinde",
+        "icon":"church.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
@@ -800,6 +807,7 @@
 
         {
         "chapter_name":"Lebendiger Glaube",
+        "icon":"heart.png",
         "content":[ 
         {
             "subtitle":"Einstieg",
