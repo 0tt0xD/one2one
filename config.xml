@@ -1,17 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="de.everynation.one2onebasic" version="2.25" xmlns="http://www.w3.org/ns/widgets">
+<widget id="de.everynation.one2onebasic" version="2.0" xmlns="http://www.w3.org/ns/widgets">
   <name>one2one basic</name>
   <description>This is the best app ever.</description>
-  <author email="info@myapp.com" href="http://www.myapp.com">Amazing App Team</author>
-  <preference name="phonegap-version" value="cli-6.3.0" />
-  <preference name="permissions" value="none" />
-  <preference name="orientation" value="portrait" />
-  <preference name="target-device" value="universal" />
-  <preference name="fullscreen" value="false" />
-
-  <plugin name="cordova-plugin-inappbrowser" spec="1.3.0" />
-  <plugin name="cordova-plugin-device" spec="1.1.2" />
-  <plugin name="cordova-plugin-splashscreen" spec="3.2.2" />
+  <author email="info@everynation-nuernberg.de" href="http://www.everynation-nuernberg.de">EveryNation Nürnberg</author>
 
   <icon src="icon.png" />
   <splash src="splash.png" />
