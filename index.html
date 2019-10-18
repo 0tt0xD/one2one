@@ -42,7 +42,10 @@
   ***********************************************************************-->
 
   <body>
-        <div id="main_container">      
+        <div id="main_container"> 
+            <div class="main_card" onClick="switchLanguage()"> 
+            <img src="resources/icons/world.png" width="32" height="32">
+          </div>     
           <div class="main_card" id="id-name" onClick="showIntroduction()"> 
             <img src="resources/icons/instruction.png" width="32" height="32">
           </div>
@@ -161,7 +164,7 @@
 
 <script>
 
-    var jsonObj = JSON.parse(`
+    var jsonObjGerman = JSON.parse(`
     [
     {
         "chapter_name": "Design",
@@ -1366,7 +1369,1245 @@
       }
 ]
     `);
-    
+
+    var jsonObjEnglisch = JSON.parse(`
+    [
+  {
+    "chapter_name": "Design",
+    "icon": "tim_design.PNG",
+    "content": [
+      {
+        "subtitle": "Introduction",
+        "content": [
+          {
+            "text": "What thoughts do you associate with the word ”purpose”?",
+            "type": "question"
+          },
+          {
+            "text": "Does mankind have a purpose?",
+            "type": "question"
+          },
+          {
+            "text": "What purpose do you see for your own life?",
+            "type": "question"
+          },
+          {
+            "text": "Jer 29,11",
+            "type": "bible",
+            "info": "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope."
+          },
+          {
+            "text": "What is God's heart and purpose for humankind - for you?",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Humanity",
+        "content": [
+          {
+            "text": "How valuable are relationships for you and which are the most important? How would it be to be completly alone?",
+            "type": "question"
+          },
+          {
+            "text": "What are the essential emotional human needs?",
+            "type": "question"
+          },
+          {
+            "text": "How important is it for a person to be loved and accepted? What happens if those feeling are absent?",
+            "type": "question"
+          },
+          {
+            "text": "Do humans moral beings, do they have a consciousness, a sense of justice, creative capabilities and why?",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Humanity and God",
+        "content": [
+          {
+            "text": "Genesis 1:26-27.31 (ESV)",
+            "type": "bible",
+            "info": "Then God said, “Let us make man in our image, after our likeness. And let them have dominion over the fish of the sea and over the birds of the heavens and over the livestock and over all the earth and over every creeping thing that creeps on the earth.” So God created man in his own image, in the image of God he created him; male and female he created them. [...] And God saw everything that he had made, and behold, it was very good. And there was evening and there was morning, the sixth day."
+          },
+          {
+            "text": "What does the text state about God and about human beings?",
+            "type": "question"
+          },
+          {
+            "text": "We are made in the likeness of God: What conclusions can we draw from imperfect human trades of charater (his morals etc.) about the nature of God?",
+            "type": "question"
+          },
+          {
+            "text": "Why do you think is God referring to himself as ”us” in the text? ",
+            "type": "question"
+          },
+          {
+            "text": "What does this text indicate about the value, dignity and destiny of every human being?",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Connection between God and Man",
+        "content": [
+          {
+            "text": "Matthew 22:37-40 (ESV)",
+            "type": "bible",
+            "info": "And he said to him, “You shall love the Lord your God with all your heart and with all your soul and with all your mind. This is the great and first commandment. And a second is like it: You shall love your neighbor as yourself. On these two commandments depend all the Law and the Prophets.”"
+          },
+          {
+            "text": "What should characterize the relationship between human beings and God?",
+            "type": "question"
+          },
+          {
+            "text": "What would our society look like if we would put this commandment into practise?",
+            "type": "question"
+          },
+          {
+            "text": "What would our relationships look like?",
+            "type": "question"
+          },
+          {
+            "text": "What is God's intention with these commandments, and what can be concluded about His nature?",
+            "type": "question"
+          },
+          {
+            "text": "Ephesians 1:5 (ESV)",
+            "type": "bible",
+            "info": "he predestined us[2] for adoption to himself as sons through Jesus Christ, according to the purpose of his will"
+          },
+          {
+            "text": "What characterizes the relationship between a child and his/her parents?",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Core and Challenge",
+        "content": [
+          {
+            "text": "What is your take-home from this chapter?",
+            "type": "question"
+          },
+          {
+            "text": "What goals do you want to set for the upcoming weeks?",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Prayer Tags",
+        "content": [
+          {
+            "text": "Purpose, Relationships (Family, Friends), Encounter with God",
+            "type": "impulsee"
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "chapter_name": "Saviour",
+    "icon": "tim_erettung.PNG",
+    "content": [
+      {
+        "subtitle": "Introduction",
+        "content": [
+          {
+            "text": "Have you ever been saved from danger? ",
+            "type": "question"
+          },
+          {
+            "text": "Is the world, we live in, fair? Why or why not? What's wrong? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "God's Standard",
+        "content": [
+          {
+            "text": "In your opinion: What does God demand of us?",
+            "type": "question"
+          },
+          {
+            "text": "Do you think you are a good person, and why?",
+            "type": "question"
+          },
+          {
+            "text": "By which standard are you making this assesment?",
+            "type": "question"
+          },
+          {
+            "text": "Are you meeting your own standards?",
+            "type": "question"
+          },
+          {
+            "text": "Matthew 15:19 (ESV)",
+            "type": "bible",
+            "info": "For out of the heart come evil thoughts, murder, adultery, sexual immorality, theft, false witness, slander."
+          },
+          {
+            "text": "Can you agree with this bible verse? Why or why not?",
+            "type": "question"
+          },
+          {
+            "text": "Do all thoughts turn into actions? Does that mean they're less evil?",
+            "type": "question"
+          },
+          {
+            "text": "What keeps us from putting evil thoughts into action?",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Seperation and Reconcilation",
+        "content": [
+          {
+            "text": "Romans 6:23",
+            "type": "bible",
+            "info": "For the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord."
+          },
+          {
+            "text": "What is sin?",
+            "type": "question"
+          },
+          {
+            "text": "What does this bible verse mean by ”death?” ",
+            "type": "question"
+          },
+          {
+            "text": "Would God be just if he wouldn't condemn sins? ",
+            "type": "question"
+          },
+          {
+            "text": "What are the consequences of sin in our lives, in society, in our relationships? (Theft, murder, lies, envy, hate, unforgiveness, jealousy...) ",
+            "type": "question"
+          },
+          {
+            "text": "How are you dealing with your guilt in your life? Why are you handling it that way? ",
+            "type": "question"
+          },
+          {
+            "text": "Is it possible to make amends? ",
+            "type": "question"
+          },
+          {
+            "text": "Where is this not possible, and why? What solution do you have for those instances? ",
+            "type": "question"
+          },
+          {
+            "text": "What is the eternal life? When does eternal life begin?",
+            "type": "question"
+          },
+          {
+            "text": "How do we receive the gift of eternal life? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Grace",
+        "content": [
+          {
+            "text": "Luke 23:39-43 (ESV)",
+            "type": "bible",
+            "info": "One of the criminals who were hanged railed at him, saying, “Are you not the Christ? Save yourself and us!” But the other rebuked him, saying, “Do you not fear God, since you are under the same sentence of condemnation? And we indeed justly, for we are receiving the due reward of our deeds; but this man has done nothing wrong.” And he said, “Jesus, remember me when you come into your kingdom.” And he said to him, “Truly, I say to you, today you will be with me in paradise.”"
+          },
+          {
+            "text": "Did the criminal deserve to be saved? Why or why not?",
+            "type": "question"
+          },
+          {
+            "text": "Do you think he lived a good life?",
+            "type": "question"
+          },
+          {
+            "text": "What's the difference between the two criminals?",
+            "type": "question"
+          },
+          {
+            "text": "Why did the second criminal get saved? ",
+            "type": "question"
+          },
+          {
+            "text": "2. Corinthians 5:21 (ESV)",
+            "type": "bible",
+            "info": "For our sake he made him to be sin who knew no sin, so that in him we might become the righteousness of God."
+          }
+        ]
+      },
+      {
+        "subtitle": "Core & Challenge",
+        "content": [
+          {
+            "text": "What is your take-home from this chapter?",
+            "type": "question"
+          },
+          {
+            "text": "What keeps you from accepting the gift of Jesus that we've talked about? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Prayer Tags",
+        "content": [
+          {
+            "text": "Forgiveness and forgiving, salvation, getting to know Jesus",
+            "type": "impulse"
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "chapter_name": "Lordship and Leadership",
+    "icon": "tim_nachfolge.PNG",
+    "content": [
+      {
+        "subtitle": "Introduction",
+        "content": [
+          {
+            "text": "Where did you experience good and bad leadership? ",
+            "type": "question"
+          },
+          {
+            "text": "What do you need to follow someone? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "No Empty Words ",
+        "content": [
+          {
+            "text": "Luke 6:46 (ESV) ",
+            "type": "bible",
+            "info": "Why do you call me ‘Lord, Lord,’ and not do what I tell you?"
+          },
+          {
+            "text": "Matthew 7:21 (ESV)",
+            "type": "bible",
+            "info": "Not everyone who says to me, ‘Lord, Lord,’ will enter the kingdom of heaven, but the one who does the will of my Father who is in heaven."
+          },
+          {
+            "text": "What does Jesus ask of his followers? ",
+            "type": "question"
+          },
+          {
+            "text": "”Practice what you preach” - Why?",
+            "type": "question"
+          },
+          {
+            "text": "What does the word ”faith” mean to you, and how is it connected with your actions? ",
+            "type": "question"
+          },
+          {
+            "text": "Acts 2:36 (ESV) ",
+            "type": "bible",
+            "info": "Let all the house of Israel therefore know for certain that God has made him both Lord and Christ, this Jesus whom you crucified."
+          },
+          {
+            "text": "By whom and why was Jesus made Lord? ",
+            "type": "question"
+          },
+          {
+            "text": "Under what conditions can you trust a leader?",
+            "type": "question"
+          },
+          {
+            "text": "What advantages and disadvantages can there be to follow a leader? ",
+            "type": "question"
+          },
+          {
+            "text": "What kind of leader is Jesus? ",
+            "type": "question"
+          },
+          {
+            "text": "YouTube Video: The Messiah",
+            "type": "youtube"
+          }
+        ]
+      },
+      {
+        "subtitle": "Living According to God's Will",
+        "content": [
+          {
+            "text": "Do you think it's hard to follow Jesus and to obey his commandments? Why? ",
+            "type": "question"
+          },
+          {
+            "text": "Ezekiel 36:26-27 (ESV)",
+            "type": "bible",
+            "info": "And I will give you a new heart, and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh. And I will put my Spirit within you, and cause you to walk in my statutes and be careful to obey my rules."
+          },
+          {
+            "text": "Have you ever experienced things that hardened your heart or made it bitter? ",
+            "type": "question"
+          },
+          {
+            "text": "What does it mean to have a living heart? ",
+            "type": "question"
+          },
+          {
+            "text": "How is it possible to live according to God's will? Is failure allowed? ",
+            "type": "question"
+          },
+          {
+            "text": "What do you think, how is it possible to get this new heart? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "The Center of the Will of Jesus",
+        "content": [
+          {
+            "text": "Matthew 22:37 (ESV)",
+            "type": "bible",
+            "info": "And he said to him, “You shall love the Lord your God with all your heart and with all your soul and with all your mind."
+          },
+          {
+            "text": "Can you command/order love? ",
+            "type": "question"
+          },
+          {
+            "text": "What does following Jesus' commandments have to do with our mind and our emotions? ",
+            "type": "question"
+          },
+          {
+            "text": "Is it blind faith or am I allowed to use my mind/thoughts? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Core & Challenge",
+        "content": [
+          {
+            "text": "What is your take-home from this chapter?",
+            "type": "question"
+          },
+          {
+            "text": "Whom are you following? To which standards are you alining your life? ",
+            "type": "question"
+          },
+          {
+            "text": "How do you think would your life like if Jesus were to be your Lord? ",
+            "type": "question"
+          },
+          {
+            "text": "Do you believe you have set the right priorities in your life? How could you if necessary change them?",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Prayer Tags",
+        "content": [
+          {
+            "text": "New heart, priorities, lordship of Jesus (areas of life) ",
+            "type": "impulse"
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "chapter_name": "Repentance",
+    "icon": "tim_umkehr.PNG",
+    "content": [
+      {
+        "subtitle": "Introduction",
+        "content": [
+          {
+            "text": "What were your three most beautiful experiences with your father or mother?",
+            "type": "question"
+          },
+          {
+            "text": "What would you have wish for from your father/mother? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Lost & Found",
+        "content": [
+          {
+            "text": "God introduces himself as our heavenly Father: Story of the Prodigal Son from the Bible - Luke 15:11-32 (ESV) ",
+            "type": "bible",
+            "info": "And he said, “There was a man who had two sons. And the younger of them said to his father, ‘Father, give me the share of property that is coming to me.’ And he divided his property between them. Not many days later, the younger son gathered all he had and took a journey into a far country, and there he squandered his property in reckless living. And when he had spent everything, a severe famine arose in that country, and he began to be in need. So he went and hired himself out to[2] one of the citizens of that country, who sent him into his fields to feed pigs. And he was longing to be fed with the pods that the pigs ate, and no one gave him anything. “But when he came to himself, he said, ‘How many of my father’s hired servants have more than enough bread, but I perish here with hunger! I will arise and go to my father, and I will say to him, “Father, I have sinned against heaven and before you. I am no longer worthy to be called your son. Treat me as one of your hired servants.”’ And he arose and came to his father. But while he was still a long way off, his father saw him and felt compassion, and ran and embraced him and kissed him. And the son said to him, ‘Father, I have sinned against heaven and before you. I am no longer worthy to be called your son.’[3] But the father said to his servants,[4] ‘Bring quickly the best robe, and put it on him, and put a ring on his hand, and shoes on his feet. And bring the fattened calf and kill it, and let us eat and celebrate. For this my son was dead, and is alive again; he was lost, and is found.’ And they began to celebrate. “Now his older son was in the field, and as he came and drew near to the house, he heard music and dancing. And he called one of the servants and asked what these things meant. And he said to him, ‘Your brother has come, and your father has killed the fattened calf, because he has received him back safe and sound.’ But he was angry and refused to go in. His father came out and entreated him, but he answered his father, ‘Look, these many years I have served you, and I never disobeyed your command, yet you never gave me a young goat, that I might celebrate with my friends. But when this son of yours came, who has devoured your property with prostitutes, you killed the fattened calf for him!’ And he said to him, ‘Son, you are always with me, and all that is mine is yours. It was fitting to celebrate and be glad, for this your brother was dead, and is alive; he was lost, and is found.’”"
+          },
+          {
+            "text": "How would you describe the behavior of the son who is leaving the father? What is his motivation? ",
+            "type": "question"
+          },
+          {
+            "text": "How do you think does the father feels when his son leaves him? ",
+            "type": "question"
+          },
+          {
+            "text": "Why does the son turn back, and what are his apprehensions?",
+            "type": "question"
+          },
+          {
+            "text": "How does the father react when his son returns home? What surprises you? ",
+            "type": "question"
+          },
+          {
+            "text": "Do you think this experience changed the son? Why or why not? ",
+            "type": "question"
+          },
+          {
+            "text": "What do you think will motivate him to be a ”good son” in the future and to keep turning back to his father when he makes a mistake? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "My Story",
+        "content": [
+          {
+            "text": "Can I share my story of turning back to God with you? ",
+            "type": "action"
+          },
+          {
+            "text": "How do you personally think God will welcome you when you turn back to Him? ",
+            "type": "question"
+          },
+          {
+            "text": "What do you think is the Father's heartbeat for you? What does he want for your life? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Core & Challenge",
+        "content": [
+          {
+            "text": "How is your relationship with God right now? ",
+            "type": "question"
+          },
+          {
+            "text": "Do you want to get to know him as your loving Father? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Prayer Tags",
+        "content": [
+          {
+            "text": "Experiencing God, turning back to God, forgiveness, identity as a loved child, reconciliation ",
+            "type": "impulse"
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "chapter_name": "Baptism",
+    "icon": "tim_taufe.PNG",
+    "content": [
+      {
+        "subtitle": "Introduction",
+        "content": [
+          {
+            "text": "Have you ever felt like a new person?",
+            "type": "question"
+          },
+          {
+            "text": "Where would you have liked to turn back time? ",
+            "type": "question"
+          },
+          {
+            "text": "What do you know about baptism? What do you associate with it? ",
+            "type": "question"
+          },
+          {
+            "text": "Should baptism be your own decision? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Water Baptism",
+        "content": [
+          {
+            "text": "Acts 2:37-38 (ESV) ",
+            "type": "bible",
+            "info": "Now when they heard this they were cut to the heart, and said to Peter and the rest of the apostles, “Brothers, what shall we do?” And Peter said to them, “Repent and be baptized every one of you in the name of Jesus Christ for the forgiveness of your sins, and you will receive the gift of the Holy Spirit."
+          },
+          {
+            "text": "Romans 6:3-4 (ESV) ",
+            "type": "bible",
+            "info": "Do you not know that all of us who have been baptized into Christ Jesus were baptized into his death? We were buried therefore with him by baptism into death, in order that, just as Christ was raised from the dead by the glory of the Father, we too might walk in newness of life."
+          },
+          {
+            "text": "Who should be baptized? What should be the underlying motivation? Are there any prerequisites?  ",
+            "type": "question"
+          },
+          {
+            "text": "”...died and buried”- What does this mean in the context of baptism? ",
+            "type": "question"
+          },
+          {
+            "text": "If we are to live a new life, what was the old one and how does it differ from the new one? ",
+            "type": "question"
+          },
+          {
+            "text": "By what power should we live this new life? How is this power called? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Baptism in the Holy Spirit",
+        "content": [
+          {
+            "text": "Have you heard of miracles or the supernatural or have you experienced things like this yourself? ",
+            "type": "question"
+          },
+          {
+            "text": "Do you believe in miracles or the supernatural? Are you open to such experiences? ",
+            "type": "question"
+          },
+          {
+            "text": "Matthew 3:11 (ESV) ",
+            "type": "bible",
+            "info": "I baptize you with water for repentance, but he who is coming after me is mightier than I, whose sandals I am not worthy to carry. He will baptize you with the Holy Spirit and fire."
+          },
+          {
+            "text": "What have you heard about the baptism in the Holy Spirit so far? ",
+            "type": "question"
+          },
+          {
+            "text": "What do you think does it mean to be baptized in Spirit and fire? ",
+            "type": "question"
+          },
+          {
+            "text": "Luke 11:13 (ESV)",
+            "type": "bible",
+            "info": "If you then, who are evil, know how to give good gifts to your children, how much more will the heavenly Father give the Holy Spirit to those who ask him!"
+          },
+          {
+            "text": "Acts 8:17 (ESV) ",
+            "type": "bible",
+            "info": "Then they laid their hands on them and they received the Holy Spirit."
+          },
+          {
+            "text": "When is it possible for this baptism to take place, and how does it happen?",
+            "type": "question"
+          },
+          {
+            "text": "1. Corinthians 14:1.3-5 (ESV) ",
+            "type": "bible",
+            "info": "Pursue love, and earnestly desire the spiritual gifts, especially that you may prophesy. [...] On the other hand, the one who prophesies speaks to people for their upbuilding and encouragement and consolation. The one who speaks in a tongue builds up himself, but the one who prophesies builds up the church."
+          },
+          {
+            "text": "What thoughts are new to you in this bible verse? ",
+            "type": "question"
+          },
+          {
+            "text": "What does your common sense tell you about this bible verse? ",
+            "type": "question"
+          },
+          {
+            "text": "Why does God give these gifts to believers? ",
+            "type": "question"
+          },
+          {
+            "text": "Do you think you (potentially) have any of these gifts? ",
+            "type": "question"
+          },
+          {
+            "text": "May I pray for you for a prophetic word/ healing/ encounter with God? ",
+            "type": "action"
+          }
+        ]
+      },
+      {
+        "subtitle": "Core & Challenge",
+        "content": [
+          {
+            "text": "What is your take-home from this chapter? ",
+            "type": "question"
+          },
+          {
+            "text": "Would you like to be baptized? ",
+            "type": "question"
+          },
+          {
+            "text": "Would you like to be baptized in the Holy Spirit?",
+            "type": "question"
+          },
+          {
+            "text": "YouTube Video: The Holy Spirit",
+            "type": "youtube"
+          }
+        ]
+      },
+      {
+        "subtitle": "Prayer Tags",
+        "content": [
+          {
+            "text": "Baptism, fresh start, baptism in the Holy Spirit, healing, miracles, encounters with God",
+            "type": "implus"
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+
+
+  {
+    "chapter_name": "Communication",
+    "icon": "tim_kommunikation.PNG",
+    "content": [
+      {
+        "subtitle": "Introduction",
+        "content": [
+          {
+            "text": "Ask each other: ”What is your character? What is your passion?” ",
+            "type": "action"
+          },
+          {
+            "text": "Do you know each other better now? What does getting to know each other depend upon?",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Bible",
+        "content": [
+          {
+            "text": "What do you think were God's intentions in giving us the Bible?",
+            "type": "question"
+          },
+          {
+            "text": "John 8:31-32 (ESV)",
+            "type": "bible",
+            "info": "So Jesus said to the Jews who had believed him, “If you abide in my word, you are truly my disciples, and you will know the truth, and the truth will set you free.”"
+          },
+          {
+            "text": "John 14:6 (ESV)",
+            "type": "bible",
+            "info": "Jesus said to him, “I am the way, and the truth, and the life. No one comes to the Father except through me."
+          },
+          {
+            "text": "2. Timothy 3:16 (ESV)",
+            "type": "bible",
+            "info": "All Scripture is breathed out by God and profitable for teaching, for reproof, for correction, and for training in righteousness"
+          },
+          {
+            "text": "According to the bible verses above, why should we read the Bible? ",
+            "type": "question"
+          },
+          {
+            "text": "What does it mean to be free? ",
+            "type": "question"
+          },
+          {
+            "text": "What is the truth? How do you define truth? ",
+            "type": "question"
+          },
+          {
+            "text": "How and why does the truth set free? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Prayer",
+        "content": [
+          {
+            "text": "What is your experience with prayer so far?",
+            "type": "question"
+          },
+          {
+            "text": "How does it work? How do you do it, and how often?",
+            "type": "question"
+          },
+          {
+            "text": "Have you ever prayed before, and why? ",
+            "type": "question"
+          },
+          {
+            "text": "How did you feel during or after prayer?",
+            "type": "question"
+          },
+          {
+            "text": "Have your prayers been answered before? ",
+            "type": "question"
+          },
+          {
+            "text": "Does every prayer get answered? ",
+            "type": "question"
+          },
+          {
+            "text": "Matthew 6:5-8 (ESV) ",
+            "type": "bible",
+            "info": "And when you pray, you must not be like the hypocrites. For they love to stand and pray in the synagogues and at the street corners, that they may be seen by others. Truly, I say to you, they have received their reward. But when you pray, go into your room and shut the door and pray to your Father who is in secret. And your Father who sees in secret will reward you. “And when you pray, do not heap up empty phrases as the Gentiles do, for they think that they will be heard for their many words. Do not be like them, for your Father knows what you need before you ask him."
+          },
+          {
+            "text": "May I be honest with God? ",
+            "type": "question"
+          },
+          {
+            "text": "What is a wrong intention for prayer, and what is the result? ",
+            "type": "question"
+          },
+          {
+            "text": "Why should we retreat to a lonly place for prayer? ",
+            "type": "question"
+          },
+          {
+            "text": "Does this exclude joint prayer? Why or why not? ",
+            "type": "question"
+          },
+          {
+            "text": "May I tell you how I experience prayer, including a few highlights? ",
+            "type": "action"
+          }
+        ]
+      },
+      {
+        "subtitle": "Core & Challenge",
+        "content": [
+          {
+            "text": "What is your take-home from this chapter? ",
+            "type": "question"
+          },
+          {
+            "text": "May I give you a Bible (or recommend an app)? ",
+            "type": "action"
+          },
+          {
+            "text": "Would you like to read in the Bible this week? (recommendation: Gospel of Luke) ",
+            "type": "question"
+          },
+          {
+            "text": "May I shortly explain to you how I spend time with God, in the Bible, and prayer? ",
+            "type": "action"
+          },
+          {
+            "text": "Would you like to pray for a person or a specific matter this week? ",
+            "type": "question"
+          },
+          {
+            "text": "May I pray for you?",
+            "type": "action"
+          }
+        ]
+      },
+      {
+        "subtitle": "Prayer Tags",
+        "content": [
+          {
+            "text": "Truth, freedom, answered prayers, revelations from the Bible",
+            "type": "impulse"
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "chapter_name": "Church",
+    "icon": "tim_gemeinde.PNG",
+    "content": [
+      {
+        "subtitle": "Introduction",
+        "content": [
+          {
+            "text": "How have you experienced church so far? ",
+            "type": "question"
+          },
+          {
+            "text": "Have you already visited different churches, with different traditions? What were your different experiences? ",
+            "type": "question"
+          },
+          {
+            "text": "What similarities do you see between the church and family? ",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Family",
+        "content": [
+          {
+            "text": "1. Thessalonians 5:11 (ESV) ",
+            "type": "bible",
+            "info": "Therefore encourage one another and build one another up, just as you are doing."
+          },
+          {
+            "text": "Matthew 18:21-22 (ESV)",
+            "type": "bible",
+            "info": "Then Peter came up and said to him, “Lord, how often will my brother sin against me, and I forgive him? As many as seven times?” Jesus said to him, “I do not say to you seven times, but seventy-seven times."
+          },
+          {
+            "text": "Hebrews 10:24 (ESV) ",
+            "type": "bible",
+            "info": "And let us consider how to stir up one another to love and good works"
+          },
+          {
+            "text": "1. Corinthians 12:27-28 (ESV)",
+            "type": "bible",
+            "info": "Now you are the body of Christ and individually members of it. And God has appointed in the church first apostles, second prophets, third teachers, then miracles, then gifts of healing, helping, administrating, and various kinds of tongues."
+          },
+          {
+            "text": "What should characterize church life?",
+            "type": "question"
+          },
+          {
+            "text": "What should characterize the relationships in the church? ",
+            "type": "question"
+          },
+          {
+            "text": "How would you feel about it, if church were lived like that? ",
+            "type": "question"
+          },
+          {
+            "text": "What do you think is the goal of a church?",
+            "type": "question"
+          },
+          {
+            "text": "Do churches meet this goal these days? How would this be possible?",
+            "type": "question"
+          },
+          {
+            "text": "”A church is not a museum for the sacred, but a hospital for the broken.” - ”The local church is the hope for the world.” What do you think about these statements?",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Society",
+        "content": [
+          {
+            "text": "Should church be involved in society and should it stand up against injustice? In what way?",
+            "type": "question"
+          },
+          {
+            "text": "May I share some examples that I personally know (even from my own church)?",
+            "type": "action"
+          },
+          {
+            "text": "Jeremia 29:7",
+            "type": "bible",
+            "info": "But seek the welfare of the city where I have sent you into exile, and pray to the Lord on its behalf, for in its welfare you will find your welfare."
+          },
+          {
+            "text": "Jesaja 1:17",
+            "type": "bible",
+            "info": "learn to do good; seek justice, correct oppression; bring justice to the fatherless, plead the widow’s cause."
+          },
+          {
+            "text": "Matthew 28:19-20 (ESV) ",
+            "type": "bible",
+            "info": "Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.”"
+          },
+          {
+            "text": "What is the mission of the church in our society?",
+            "type": "question"
+          },
+          {
+            "text": "What opposition should we expect, from whom, and why?",
+            "type": "question"
+          },
+          {
+            "text": "How can this ”impossible mission” become possible?",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Core & Challenge",
+        "content": [
+          {
+            "text": "What is your take-home from this chapter? ",
+            "type": "question"
+          },
+          {
+            "text": "Should we attend a church service together in the near future? ",
+            "type": "action"
+          },
+          {
+            "text": "Would you like to visit a local Christian initiative of social responsibility?",
+            "type": "action"
+          }
+        ]
+      },
+      {
+        "subtitle": "Prayer Tags",
+        "content": [
+          {
+            "text": "Church as a family, fighting injustice, Calling (my place to make a difference in society)",
+            "type": "impulse"
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "chapter_name": "Living by Faith",
+    "icon": "tim_lebendigerGlaube.PNG",
+    "content": [
+      {
+        "subtitle": "Introduction",
+        "content": [
+          {
+            "text": "How do you feel about everything we have talked about so far? Did you make any new experiences? ",
+            "type": "question"
+          },
+          {
+            "text": "Have your views changed? Which ones and why? What has turned out to be a prejudice about faith in Jesus? ",
+            "type": "question"
+          },
+          {
+            "text": "Faith moves mountains, did you ever make an experience like this?",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Theory or Life Reality",
+        "content": [
+          {
+            "text": "2. Thessalonians 2:13 (ESV) ",
+            "type": "bible",
+            "info": "But we ought always to give thanks to God for you, brothers beloved by the Lord, because God chose you as the firstfruits to be saved, through sanctification by the Spirit and belief in the truth."
+          },
+          {
+            "text": "What is the difference between a theory and God's word, that is alive? ",
+            "type": "question"
+          },
+          {
+            "text": "How can the Word of God release its power in our everyday life?",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Identity",
+        "content": [
+          {
+            "text": "When you think about people that are very close to you (father, mother, friend, ...) or your inner voice, what do you hear them say about you as a person? (Formulate a catch phrase for each person, like...you need to be more industrious, etc.) ",
+            "type": "question"
+          },
+          {
+            "text": "How much have these statements defined you? Are those stements true?",
+            "type": "question"
+          },
+          {
+            "text": "What do you think, does Jesus say about you and your life? ",
+            "type": "question"
+          },
+          {
+            "text": "Joh 15:15",
+            "type": "bible",
+            "info": "No longer do I call you servants,[1] for the servant does not know what his master is doing; but I have called you friends, for all that I have heard from my Father I have made known to you."
+          },
+          {
+            "text": "Joh 1:12",
+            "type": "bible",
+            "info": "But to all who did receive him, who believed in his name, he gave the right to become children of God"
+          },
+          {
+            "text": "2 Cor 5:21",
+            "type": "bible",
+            "info": "For our sake he made him to be sin who knew no sin, so that in him we might become the righteousness of God."
+          },
+          {
+            "text": "What do those verses state about your identity in Jesus?",
+            "type": "question"
+          },
+          {
+            "text": "Eph 1:17-20",
+            "type": "bible",
+            "info": "that the God of our Lord Jesus Christ, the Father of glory, may give you the Spirit of wisdom and of revelation in the knowledge of him, having the eyes of your hearts enlightened, that you may know what is the hope to which he has called you, what are the riches of his glorious inheritance in the saints, and what is the immeasurable greatness of his power toward us who believe, according to the working of his great might that he worked in Christ when he raised him from the dead"
+          },
+          {
+            "text": "Which hope and rich inheritance for this earthly life does God have in store for you?",
+            "type": "question"
+          },
+          {
+            "text": "How does this inheritance and this hope get activated in your life?",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "subtitle": "Mission - inside out",
+        "content": [
+          {
+            "text": "Mark 16:15-16",
+            "type": "bible",
+            "info": "And he said to them, “Go into all the world and proclaim the gospel to the whole creation. Whoever believes and is baptized will be saved, but whoever does not believe will be condemned."
+          },
+          {
+            "text": "What is the good news that we should tell the whole world about?",
+            "type": "question"
+          },
+          {
+            "text": "James 2:14 in parts",
+            "type": "bible",
+            "info": "What good is it, my brothers, if someone says he has faith but does not have works? Can that faith save him?"
+          },
+          {
+            "text": "Mat 12:33 and 34b-35",
+            "type": "bible",
+            "info": "Either make the tree good and its fruit good, or make the tree bad and its fruit bad, for the tree is known by its fruit. [...] For out of the abundance of the heart the mouth speaks. The good person out of his good treasure brings forth good, and the evil person out of his evil treasure brings forth evil."
+          },
+          {
+            "text": "From a changed identity will flow different works! - do you agree with this statement?",
+            "type": "question"
+          },
+          {
+            "text": "Joh 7:38",
+            "type": "bible",
+            "info": "Whoever believes in me, as the Scripture has said, ‘Out of his heart will flow rivers of living water.’"
+          }
+        ]
+      },
+      {
+        "subtitle": "Core & Challenge",
+        "content": [
+          {
+            "text": "What is your take-home from this chapter?",
+            "type": "question"
+          },
+          {
+            "text": "What did you learn in this chapter about your identity in Jesus",
+            "type": "question"
+          },
+          {
+            "text": "Would you like to read the Bible in the near future, and accept the truths that God speaks about you?",
+            "type": "action"
+          },
+          {
+            "text": "I would like to bring you along to a small-group, where we care for one-another, encourage each other in our faith and cheer each other on to make a difference",
+            "type": "action"
+          },
+          {
+            "text": "What ”flows from your identity” and how does it influence other people and our society - or where would you see potential for this to happen inside of you?",
+            "type": "action"
+          }
+        ]
+      }
+    ]
+  }
+]
+    `);
+
+    var jsonObj = jsonObjGerman;
+
+    var language = 'de';
+    loadLanguage();
+
+    function loadLanguage() {
+        language = localStorage.getItem('language')
+
+        if(language == null) {
+            language = 'de'
+        }
+
+        if(language == 'en') {
+            jsonObj = jsonObjEnglisch;
+        }
+
+    }
+
+    function switchLanguage() {
+
+        if(language == 'de') {
+            language = 'en';
+            jsonObj = jsonObjEnglisch;
+        } else {
+            language = 'de';
+            jsonObj = jsonObjGerman;
+        }
+
+        localStorage.setItem('language', language);
+        location.reload();
+    }
+
     setupJson(jsonObj);
 
     // Neue Zeile (row) klonen und in die Tabelle einfügen
