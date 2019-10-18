@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="de.everynation.one2onebasic" version="2.0" xmlns="http://www.w3.org/ns/widgets">
   <name>one2one basic</name>
-  <description>This is the best app ever.</description>
+  <description>Basic version of the one2one.</description>
   <author email="info@everynation-nuernberg.de" href="http://www.everynation-nuernberg.de">EveryNation Nürnberg</author>
 
   <icon src="one2one.jpg" />
