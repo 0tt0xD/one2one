@@ -4,6 +4,5 @@
   <description>This is the best app ever.</description>
   <author email="info@everynation-nuernberg.de" href="http://www.everynation-nuernberg.de">EveryNation Nürnberg</author>
 
-  <icon src="icon.png" />
-  <splash src="splash.png" />
+  <icon src="one2one.jpg" />
 </widget>
