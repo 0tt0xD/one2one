@@ -68,23 +68,44 @@
   *   Template
   ***********************************************************************-->
 
-  <template id="introduction_content">
+  <template id="introduction_content_de">
     <div id="introduction_content"> 
-      Unser Herz schlägt dafür Menschen die Möglichkeit zu geben sich für oder gegen den Glauben an den christlichen Gott zu entscheiden, um den es in allen Kapiteln gehen soll. Diese Entscheidung soll nicht auf Vorurteilen oder Hörensagen basieren.  ,daher laden wir dich ein, mit uns anhand dieses Gesprächsleitfadens über die Grundthemen des christlichen Glaubens zu reden.
-
+      Es ist uns ein Herzensanliegen Menschen die Möglichkeit zu geben sich für oder gegen den Glauben an den christlichen Gott zu entscheiden, um den es in allen Kapiteln gehen soll. Diese Entscheidung soll nicht auf Vorurteilen oder Hörensagen basieren, daher laden wir dich ein, anhand dieses Gesprächsleitfadens über die Grundthemen des christlichen Glaubens zu reden.  
+      
       <br>
       <br>
 
-      Wir schlagen 4 Elemente für unsere Treffen vor: 
+      Wir schlagen 4 Elemente für unsere Treffen vor:
 
-      <ol>
-        <li>nach oben: wofür sind wir dankbar</li>
-        <li>nach hinten: worüber haben wir letztes Mal gesprochen, habe ich wir Herausforderung vom letzten Mal umgesetzt und wie ging es uns dabei?</li>
-        <li>nach innen: Input für heute anhand des one 2 one basics</li>
-        <li>nach außen: welche Herausforderungen will ich für mich annehmen</li>
-      </ol>
+        <ol>
+            <li>nach oben: wofür sind wir dankbar</li>
+            <li>nach hinten: worüber haben wir letztes Mal gesprochen, habe ich wir Herausforderung vom letzten Mal umgesetzt und wie ging es uns dabei?</li>
+            <li>nach innen: Input für heute anhand des one 2 one basics</li>
+            <li>nach außen: welche Herausforderungen will ich für mich annehmen</li>
+        </ol>
+
     </div>
   </template>
+  
+  <template id="introduction_content_en">
+        <div id="introduction_content"> 
+
+        It is our hearts' desire to empower people to make an informed decision for or against faith in the Christian God, who shall be the subject in all the chapters. This decission shall not be based on preconceived notions or hear-say, for that reason we invite you to talk about the foundational topics of the Christian faith following this conversational guide.
+
+        <br>
+        <br>
+
+        We suggest the following 4 elements for our meetings:
+        
+        <ol>
+            <li>up: what are we thankful for since we met last time?</li>
+            <li>back: what did we talk about last time; did we put last time's challenge into practice and what were our experiences?</li>
+            <li>in: input for today following the one 2 one BASIC conversational guide</li>
+            <li>out: which challenge will we take on until we meet next time?</li>
+        </ol>
+            
+        </div>
+    </template>
 
 
   <template id="chapter_card">
@@ -2859,7 +2880,7 @@
       //Back-Button einblenden
       document.getElementById("header_back").style.display = "block";
 
-      var intorduction = document.querySelector('#introduction_content');
+      var intorduction = document.querySelector('#introduction_content_' + language);
       var clone = document.importNode(intorduction.content, true);
       document.getElementById("chapter_container").appendChild(clone);
 
